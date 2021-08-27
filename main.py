@@ -38,6 +38,10 @@ def sam():
 def kamryn():
     return render_template("kamryn.html")
 
+@app.route('/div/')
+def div():
+    return render_template("div.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
