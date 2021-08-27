@@ -34,6 +34,10 @@ def krish():
 def sam():
     return render_template("sam.html")
 
+@app.route('/kamryn/')
+def kamryn():
+    return render_template("kamryn.html")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
