@@ -26,9 +26,9 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/krish/')
+@app.route('/krishL/')
 def krish():
-    return render_template("KrishL.html")
+    return render_template("krishL.html")
 
 @app.route('/sam/')
 def sam():
