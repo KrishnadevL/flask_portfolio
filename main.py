@@ -32,7 +32,13 @@ def krish():
 
 @app.route('/sam/')
 def sam():
-    return render_template("sam.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("div.html", name=name)
+    # starting and empty input default
+    return render_template("div.html", name="World")
+
 
 @app.route('/kamryn/')
 def kamryn():
@@ -67,3 +73,13 @@ def greet():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route('/greet', methods=['GET', 'POST'])
+def greet():
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("greet.html", name=name)
+    # starting and empty input default
+    return render_template("greet.html", name="World")
