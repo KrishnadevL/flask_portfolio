@@ -42,7 +42,12 @@ def sam():
 
 @app.route('/kamryn/')
 def kamryn():
-    return render_template("kamryn.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:
+            return render_template("kamryn.html", name=name)
+    # starting and empty input default
+    return render_template("kamryn.html", name="World")
 
 @app.route('/div/')
 def div():
