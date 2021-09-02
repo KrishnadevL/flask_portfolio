@@ -6,8 +6,23 @@
 
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
-    <!- Try building a new body here ->
-    <p>Tech Talk 1 - loser. </p>
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
+
+        <div class="col-12">
+            <p>Hello, {{name}}!</p>
+        </div>
+
+        <div class="col-12">
+            <form action="/sam" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+
+
+
+    </div>
 {% endblock %}
 
 <!- This is turning off birds background from base.html -->

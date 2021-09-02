@@ -26,7 +26,7 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
-@app.route('/krishL/')
+@app.route('/krishL/', methods=['GET', 'POST'])
 def krish():
     if request.form:
         name = request.form.get("name")
@@ -35,17 +35,17 @@ def krish():
     # starting and empty input default
     return render_template("krishL.html", name="World")
 
-@app.route('/sam/')
+@app.route('/sam/', methods=['GET', 'POST'])
 def sam():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("div.html", name=name)
+            return render_template("sam.html", name=name)
     # starting and empty input default
-    return render_template("div.html", name="World")
+    return render_template("sam.html", name="World")
 
 
-@app.route('/kamryn/')
+@app.route('/kamryn/', methods=['GET', 'POST'])
 def kamryn():
     if request.form:
         name = request.form.get("name")
@@ -54,7 +54,7 @@ def kamryn():
     # starting and empty input default
     return render_template("kamryn.html", name="World")
 
-@app.route('/div/')
+@app.route('/div/', methods=['GET', 'POST'])
 def div():
     if request.form:
         name = request.form.get("name")
@@ -63,17 +63,6 @@ def div():
     # starting and empty input default
     return render_template("div.html", name="World")
 
-
-#Greet Function python code for user input
-@app.route('/greet', methods=['GET', 'POST'])
-def greet():
-    # submit button has been pushed
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("krishL.html", name=name)
-    # starting and empty input default
-    return render_template("krishL.html", name="World")
 
 
 
