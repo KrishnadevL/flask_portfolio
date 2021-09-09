@@ -1,5 +1,28 @@
 ## [Flask Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter)
 Runtime link: https://portfolio.nighthawkcodingsociety.com/
+### PBL 1,2
+Hi! this will be our scoring for the assignments for PBL 1,2 
+We have fully completed 7 assignments and have one assignment in progress
+
+Assignment 1: Scrum Board 1/1
+
+Assignment 2:  Integration of greet into a mini-lab page 0.5/1 (greet is able to be added to navbar, however seperate mini-lab page integration has not been made) 
+
+Assignment 3+4: The TPT program has been completed for 2/2 points
+
+
+
+-----Individual progress-----
+
+Assignments: Commits (1 point)
+
+Assignment 2: Video Notes (1 point) 
+
+Assignment 3: Greet file (1 point) 
+
+Assignment 4: Tool declare (1 point) 
+
+
 ### Idea
 Starter code should be fun and practical.
 ### Visual thoughts
