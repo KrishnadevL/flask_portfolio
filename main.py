@@ -26,6 +26,11 @@ def walruses():
 def hawkers():
     return render_template("hawkers.html")
 
+@app.route('/Binary/')
+def Binary():
+    return render_template("Binary.html")
+
+
 @app.route('/krishL/', methods=['GET', 'POST'])
 def krish():
     if request.form:

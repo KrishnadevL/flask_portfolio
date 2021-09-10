@@ -1,17 +1,7 @@
-<!-- Custom file for standardizing Project Data
-This HTML is setup as as a Jinja2 layout, coders use layouts for:
- ... standardization of style
- ... setting expectations for data
- ... code reuse
--->
+<!-- This page is illustrative and contains ideas about HTML formatting -->
 <!DOCTYPE HTML>
 <html lang="en">
-
-{% set basename = "Intermission" %}
-{% set github = "https://github.com/nighthawkcoders" %}
-{% set twitter = "https://twitter.com/NighthawkCoding" %}
-{% set youtube = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
-
+<!-- Head, think of things that are more meta or format oriented -->
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -24,12 +14,16 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Common style for site -->
     <style>
         :root{
+            --yellow: #f1d483;
+            --green: #9daf9b;
+            --purple: #a59aaf;
+            --lblue: #6084a3;
+            --dblue: #2b425b;
+            --gray: #363d47;
             --white: whitesmoke;
             --black: black;
             --grey: grey;
@@ -42,8 +36,8 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--grey);
-            color: var(--white);
+            background-color: var(--purple);
+            color: var(--black);
         }
 
         .dark-mode {
@@ -52,7 +46,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
         }
 
         h1{
-            font-family: 'Share Tech Mono', monospace;
             font-size: 5em;
         }
 
@@ -62,7 +55,6 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
 
         .fa{
             font-size: 3em;
-            font-family: 'Share Tech Mono', Monospace;
             letter-spacing: 1em;
             transition: all .2s;
             color: white;
@@ -111,71 +103,48 @@ This HTML is setup as as a Jinja2 layout, coders use layouts for:
             margin: auto;
         }
 
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: var(--lblue);
+        }
+
     </style>
 
-    <title>{{ basename }} | {{ project }} </title>
+    <!-- Use this block for page specific meta data -->
+    {% block meta %}
+        <title>Nighthawk Coding Society</title>
+    {% endblock %}
 
 </head>
 
-<body>
-{% include "layouts/navbar.html" %}
 
-{% block body %}
-<div class="container-fluid">
-    <div class="row justify-content-end" style="padding: 2%;">
-        <div class="col-2" style="text-align: right;">
-            {% block info %}
-                <!-- notice jinja style variables used in href's -->
-                <a><h5>{{basename}}</h5></a>
-                <a href={{github}} target="_blank"><i class="fa fa-github"></i></a>
-                <a href={{youtube}} target="_blank"><i class="fa fa-youtube-play"></i></a>
-                <a href={{twitter}} target="_blank"><i class="fa fa-twitter"></i></a>
-            {% endblock %}
-        </div>
+<body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
+<!-- Bootstrap Navigation Code -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Bootstrap menus -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% include "layouts/navbar.html" %}
     </div>
+</nav>
 
-    <div class="product" style="margin-top: 2%;">
-        <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
-
-            <div class="col-8" >
-                <h1>{{ project }} Project</h1>
-            </div>
-
-        </div>
-
-        <div class="row" style="padding-left: 10%;">
-            {% block links %}
-            <div class="col-3">
-                <a href="{{ overview }}" class="btn">Overview</a>
-            </div>
-
-            <div class="col-3">
-                <a href="{{ repo }}" class="btn">Repository</a>
-            </div>
-            {% endblock %}
-        </div>
-
-    </div>
-</div>
-{%  endblock %}
-
-</body>
-
-{% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
-    <script>
-        VANTA.BIRDS({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
-    </script>
+<!-- CONTENT Block, utilize this block for page specific content  -->
+{% block content %}
 {% endblock %}
 
+
+<div class="contact" style="height: 35vh;">
+
+    <div class="row justify-content-center" style="margin-top: 2%;">
+        <h3 style="color: var(--black); margin-top: 3%; font-size: 2vw;">Contact Us</h3>
+    </div>
+
+    <div class="row justify-content-center">
+        <h4><a href="mailto: nighthawkcodingsociety@gmail">nighthawkcodingsociety@gmail</a></h4>
+    </div>
+
+</div>
+</body>
 </html>
