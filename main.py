@@ -11,20 +11,20 @@ def index():
     return render_template("index.html")
 
 
-# connects /kangaroos path to render kangaroos.html
-@app.route('/kangaroos/')
-def kangaroos():
-    return render_template("kangaroos.html")
+# connects /kangaroos path to render Trending.html
+@app.route('/Trending/')
+def Trending():
+    return render_template("Trending.html")
 
 
-@app.route('/walruses/')
-def walruses():
-    return render_template("walruses.html")
+@app.route('/Tv Shows/')
+def Walruses ():
+    return render_template("Walruses.html")
 
 
-@app.route('/hawkers/')
-def hawkers():
-    return render_template("hawkers.html")
+@app.route('/Movies/')
+def Movies():
+    return render_template("Movies.html")
 
 @app.route('/Binary/')
 def Binary():
@@ -74,3 +74,4 @@ def div():
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
+
