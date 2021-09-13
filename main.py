@@ -36,6 +36,13 @@ def Binary():
 def m_lab():
     return render_template("m_lab.html")
 
+@app.route('/krish_abt/')
+def krish_abt():
+    return render_template("krish_abt.html")
+
+@app.route('/krish_alt/')
+def krish_alt():
+    return render_template("krish_alt.html")
 
 @app.route('/sam_abt/')
 def sam_abt():

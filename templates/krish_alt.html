@@ -1,0 +1,68 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Minilabs" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <h2 id="abt_header">About Me</h2>
+    <h1 id="abt_mheader">Meet Krish</h1>
+    <img id="abt_image" src="/static/Assets/tempPhoto_CSP.jpg" alt="My face" height="450" width="450">
+
+
+    <p id="abt_content">This is about me. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pellentesque volutpat nibh ac faucibus.
+        Nunc a ligula sed quam scelerisque volutpat. Aenean a gravida mi, nec vulputate lorem.
+        Nullam elementum ullamcorper rhoncus. Vivamus elementum urna quis gravida ornare.
+        Suspendisse molestie tincidunt nulla ut imperdiet. Cras non suscipit justo, eget feugiat lacus.
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In sodales laoreet gravida.
+        Aenean quis eros libero. Morbi metus lorem, porttitor a volutpat et, scelerisque hendrerit ex.</p>
+
+    <style>
+        body{
+            background: #E3C0A1;
+        }
+        #abt_header {
+            text-align: center;
+            padding: 20px;
+            font-size: 5em;
+            color: #D5DADE;
+        }
+
+        #abt_mheader{
+            text-align: center;
+            font-size:3em ;
+            padding: 15px;
+            background: #434478;
+            margin-left: 500px;
+            margin-right: 500px;
+        }
+
+        #abt_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        a {
+            color: #A56ABD;
+        }
+
+        #abt_content {
+            text-align: center;
+            margin-left: 500px;
+            margin-right: 500px;
+            border: #E3C0A1 solid;
+
+
+        }
+    </style>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+
+{% endblock %}
