@@ -1,0 +1,75 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Minilabs" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <h2 id="abt_header"> About Me </h2>
+    <h1 id="abt_name"> Divya </h1>
+    <img src="" alt="My Picture" class="center">
+    <p id="abt_para"> This is about me. </p>
+
+
+
+    <style>
+        body{
+            background: #E3C0A1;
+        }
+        #abt_header {
+            text-align: center;
+            padding: 15px;
+            font-size: 5em;
+            color: #434478;
+        }
+
+        #abt_name {
+            text-align: center;
+            padding: 15px;
+            font-size: 4em;
+            color: white;
+        }
+        #abt_para {
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            color: white;
+            border-style: solid;
+            border-width: 6px;
+            margin: 300px;
+
+
+
+
+
+
+        }
+
+        #HeaderIntro{
+            text-align: center;
+            font-size:1.5em ;
+            padding: 15px;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:5%;
+        }
+
+        a {
+            color: #A56ABD;
+        }
+
+        .container{
+            align-self: center;
+        }
+    </style>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+
+{% endblock %}
