@@ -37,6 +37,10 @@ def m_lab():
     return render_template("m_lab.html")
 
 
+@app.route('/sam_abt/')
+def sam_abt():
+    return render_template("sam_abt.html")
+
 # Defining the Greet function for the Greet Minilab
 @app.route('/krishL/', methods=['GET', 'POST'])
 def krish():
