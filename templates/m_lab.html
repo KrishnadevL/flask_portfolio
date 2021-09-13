@@ -1,0 +1,149 @@
+<!-- Extending the predefined project layout -->
+{% extends "layouts/base.html" %}
+
+<!- This variable sets name of browser tab  -->
+{% set project = "Minilabs" %}
+
+<!- This is a replacement block for Body in base.html -->
+{% block body %}
+    <!- Try building a new body here ->
+    <h1 id="pageHeader">Our Work</h1>
+    <p id="HeaderIntro">Greeting functions.Binary decoders.Minilabs.</p>
+    <div class="container" id="m_table">
+        <div class="row">
+            <div class="col-sm">
+                <h2 class="mlab_header">Krish</h2>
+            </div>
+            <div class="col-sm">
+                <h2 class="mlab_header">Sam</h2>
+            </div>
+            <div class="col-sm">
+                <h2 class="mlab_header">Kamryn</h2>
+            </div>
+            <div class="col-sm">
+                <h2 class="mlab_header">Divya</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Greet Project</h3>
+                <p>This is really cool</p>
+                <p><a href="/krishL/">Click here!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Greet Project</h3>
+                <p>This is really cool</p>
+                <p><a href="/sam/">Click here!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Greet Project</h3>
+                <p>This is really cool</p>
+                <p><a href="/kamryn/">Click here!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Greet Project</h3>
+                <p>This is really cool</p>
+                <p><a href="/div/">Click here!</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Wireframe</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Wireframe</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Wireframe</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">Wireframe</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="mlab_s-header">BrainWrite</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">BrainWrite</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">BrainWrite</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">BrainWrite</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3 class="mlab_s-header">TPT3</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">TPT3</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">TPT3</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+            <div class="col-sm">
+                <h3 class="mlab_s-header">TPT3</h3>
+                <p>This is(will) be really cool</p>
+                <p><a href="/m_lab">WIP!</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        body{
+            background: #36223D;
+        }
+        #pageHeader {
+            text-align: center;
+            padding: 25px 25px 15px;
+            font-size: 5em;
+            color: #BFABC7;
+        }
+
+        #HeaderIntro{
+            text-align: center;
+            font-size:1.5em ;
+            padding: 15px;
+        }
+
+        a {
+            color: #A56ABD;
+        }
+
+        .container{
+            align-self: center;
+        }
+    </style>
+{% endblock %}
+
+<!- This is turning off birds background from base.html -->
+{% block background %}
+
+{% endblock %}

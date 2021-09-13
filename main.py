@@ -26,11 +26,18 @@ def Walruses ():
 def Movies():
     return render_template("Movies.html")
 
+
 @app.route('/Binary/')
 def Binary():
     return render_template("Binary.html")
 
 
+@app.route('/m_lab/')
+def m_lab():
+    return render_template("m_lab.html")
+
+
+# Defining the Greet function for the Greet Minilab
 @app.route('/krishL/', methods=['GET', 'POST'])
 def krish():
     if request.form:
@@ -39,6 +46,7 @@ def krish():
             return render_template("krishL.html", name=name)
     # starting and empty input default
     return render_template("krishL.html", name="World")
+
 
 @app.route('/sam/', methods=['GET', 'POST'])
 def sam():
@@ -59,6 +67,7 @@ def kamryn():
     # starting and empty input default
     return render_template("kamryn.html", name="World")
 
+
 @app.route('/div/', methods=['GET', 'POST'])
 def div():
     if request.form:
@@ -67,8 +76,6 @@ def div():
             return render_template("div.html", name=name)
     # starting and empty input default
     return render_template("div.html", name="World")
-
-
 
 
 # runs the application on the development server
