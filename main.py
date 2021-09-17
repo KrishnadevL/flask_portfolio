@@ -70,6 +70,10 @@ def krish():
     # starting and empty input default
     return render_template("krishL.html", name="World")
 
+@app.route('/video0/')
+def video0():
+    return render_template("video0.html")
+
 
 @app.route('/sam/', methods=['GET', 'POST'])
 def sam():
@@ -79,6 +83,7 @@ def sam():
             return render_template("sam.html", name=name)
     # starting and empty input default
     return render_template("sam.html", name="World")
+
 
 
 @app.route('/kamryn/', methods=['GET', 'POST'])
@@ -99,6 +104,16 @@ def div():
             return render_template("div.html", name=name)
     # starting and empty input default
     return render_template("div.html", name="World")
+
+@app.route('/sam_binary/', methods=['GET', 'POST'])
+def sam_binary():
+        if request.form:
+            bit_size_s = request.form.get("bit_size_s")
+            if len(bit_size_s) != 0:  # input field has content
+                return render_template("sam_binary.html", bit_size_s=int(bit_size_s))
+        # starting and empty input default
+        return render_template("sam_binary.html", bit_size_s=8)
+
 
 
 # runs the application on the development server
