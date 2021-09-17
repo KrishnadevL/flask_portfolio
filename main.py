@@ -27,10 +27,14 @@ def Movies():
     return render_template("Movies.html")
 
 
-@app.route('/Binary/')
+@app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
-    return render_template("Binary.html")
-
+    if request.form:
+        bit_size_k = request.form.get("bit_size_k")
+        if len(bit_size_k) != 0:  # input field has content
+            return render_template("Binary.html", bit_size_k=int(bit_size_k))
+    # starting and empty input default
+    return render_template("Binary.html", bit_size_k=8)
 
 @app.route('/m_lab/')
 def m_lab():
