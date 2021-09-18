@@ -9,10 +9,27 @@
     <!- Try building a new body here ->
     <h2 id="abt_header"> About Me </h2>
     <h1 id="abt_name"> Kamryn </h1>
-    <img src="" alt="My Picture" class="center">
+    <img id="abt_img" src="" alt=" My Picture">
+    <div style="text-align:center;font-size:xx-large";>
+    <a href="http://127.0.0.1:5000/kamryn_binary/">Binary</a>
+    </div>
     <p id="abt_para"> This is about me. </p>
 
 
+    <style>
+        #abt_header {
+            width: 800px;
+            height: 100px;
+            background: #A56ABD;
+            transition: width 2s;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #abt_header:hover {
+            width: 400px;
+        }
+    </style>
 
     <style>
         body{
@@ -31,32 +48,30 @@
             font-size: 4em;
             color: white;
         }
+
         #abt_para {
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             font-size: 1.5em;
             color: white;
             border-style: solid;
-            border-width: 6px;
-            margin: 300px
-
-
-
-
-
+            border-width:6px;
+            margin:300px;
 
         }
+
+        #abt_img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:5%;
+        }
+
 
         #HeaderIntro{
             text-align: center;
             font-size:1.5em ;
             padding: 15px;
-        }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width:5%;
         }
 
         a {
@@ -73,3 +88,6 @@
 {% block background %}
 
 {% endblock %}
+
+
+

@@ -114,6 +114,15 @@ def sam_binary():
         # starting and empty input default
         return render_template("sam_binary.html", bit_size_s=8)
 
+@app.route('/kamryn_binary/', methods=['GET', 'POST'])
+def kamryn_binary():
+    if request.form:
+        bit_size_k = request.form.get("bit_size_k")
+        if len(bit_size_k) != 0:  # input field has content
+            return render_template("kamryn_binary.html", bit_size_k=int(bit_size_k))
+    # starting and empty input default
+    return render_template("kamryn_binary.html", bit_size_k=8)
+
 
 
 # runs the application on the development server
