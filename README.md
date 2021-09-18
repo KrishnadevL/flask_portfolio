@@ -23,19 +23,26 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 ---
 ### Sprint 3,4 week 4
-|Task| Tangible | Issue |
-|---|---|---|
-|Additional Technical(s) according to Scrum Team project|
-|Issue(s) on Binary Math integration must contain complete enumeration of all Hack requirements with clear assignments showing completion of each Hack.|
-|Designer.  Ensure there is a Design or Research asset for prototyping work.|
-|Navigator/Tester.  Build a video showing design and runtime of prototype(s).|
-|Integration of video journal 0|
+|Task| Tangible | 
+|---|---|
+|Additional Technical(s) according to Scrum Team project|[Kamryn's](http://127.0.0.1:5000/kamryn_abt/), [Samaya's](http://127.0.0.1:5000/video0/),  [Divya's](http://127.0.0.1:5000/div_abt/), [Krish's](http://127.0.0.1:5000/Binary/)
+|Issue(s) on Binary Math integration must contain complete enumeration of all Hack requirements with clear assignments showing completion of each Hack.| [Krish's binary](http://127.0.0.1:5000/Binary/), [Samaya's binary](http://127.0.0.1:5000/sam_binary/), [Kamryns's binary](http://127.0.0.1:5000/kamryn_binary/)
+|Designer.  Ensure there is a Design or Research asset for prototyping work.|[wireframe](https://www.figma.com/file/UM0lQDt5oF6IPRGjKzBg4F/INTERMISSION-HOME-PG?node-id=0%3A1)
+|Integration of video journal 0| [Video journal 0](http://127.0.0.1:5000/video0/)|
 ---
 
+Self grade:
+team technicals done 2 points (something is wrong with Divya's flask we are not sure why it stops the binary code from running.)
 
+Individual
 
+Kamryn:2 points css done(animation on about me page) and committed
 
+Samaya:2 points integration done and committed
 
+Divya:2 points css done(animation on about me page) and committed
+
+Krish:2 binary page downloaded and committed
 
 
 
