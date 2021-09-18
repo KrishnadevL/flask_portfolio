@@ -16,6 +16,10 @@ def index():
 def Trending():
     return render_template("Trending.html")
 
+@app.route('/tpt3/')
+def tpt3():
+    return render_template("tpt3.html")
+
 
 @app.route('/Tv Shows/')
 def Walruses ():

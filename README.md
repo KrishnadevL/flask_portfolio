@@ -23,6 +23,14 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 ---
 ### Sprint 3,4 week 4
+|Task| Tangible | Issue |
+|---|---|---|
+|Additional Technical(s) according to Scrum Team project|
+|Issue(s) on Binary Math integration must contain complete enumeration of all Hack requirements with clear assignments showing completion of each Hack.|
+|Designer.  Ensure there is a Design or Research asset for prototyping work.|
+|Navigator/Tester.  Build a video showing design and runtime of prototype(s).|
+|Integration of video journal 0|
+---
 
 
 
