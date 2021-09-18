@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 {% extends "layouts/layout.html" %}
 
+
+
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
 
@@ -121,12 +123,12 @@
 <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
 
     <div class="col-12">
-        <p>Hello, {{bit_size_k}}!</p>
+        <p>Current Bit Size: {{bit_size_k}}</p>
     </div>
 
     <div class="col-12">
         <form action="/kamryn_binary" id="bit_size_k" method="POST" >
-            <label for="bit_size_k">Type a Bit Size</label>
+            <label for="bit_size_k">Enter a Bit Size</label>
             <input name="bit_size_k" id="bit_size_k">
             <input type="submit" value="Ok!">
         </form>
