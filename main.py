@@ -1,9 +1,13 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
+from algorithms.image import image_data
 
 # create a Flask instance
 app = Flask(__name__)
 
+@app.route('/rgb/')
+def rgb():
+    return render_template('rgb.html', images=image_data())
 
 # connects default URL to render index.html
 @app.route('/')
@@ -16,12 +20,8 @@ def index():
 def Trending():
     return render_template("Trending.html")
 
-@app.route('/tpt3/')
-def tpt3():
-    return render_template("tpt3.html")
 
-
-@app.route('/Tv Shows/')
+@app.route('/Walruses/')
 def Walruses ():
     return render_template("Walruses.html")
 
@@ -117,15 +117,6 @@ def sam_binary():
                 return render_template("sam_binary.html", bit_size_s=int(bit_size_s))
         # starting and empty input default
         return render_template("sam_binary.html", bit_size_s=8)
-
-@app.route('/kamryn_binary/', methods=['GET', 'POST'])
-def kamryn_binary():
-    if request.form:
-        bit_size_k = request.form.get("bit_size_k")
-        if len(bit_size_k) != 0:  # input field has content
-            return render_template("kamryn_binary.html", bit_size_k=int(bit_size_k))
-    # starting and empty input default
-    return render_template("kamryn_binary.html", bit_size_k=8)
 
 
 
