@@ -7,6 +7,32 @@
         //  document.getElementById("img<n>").src
         //  document.getElementID("img_gray<n>").innerHTML
         //  help: https://www.geeksforgeeks.org/how-to-change-the-src-attribute-of-an-img-element-in-javascript-jquery/
+        var color = {{ colored|safe }}
+        var gray = {{ grayed|safe }}
+        var imageType = 0; // 0 is color, 1 is gray
+
+        function toggleColors(array) {
+            for (var i = 1; i <= array.length; i++) {
+                let id = "img" + i;
+                setImg(id, array[i-1]);
+            }
+        }
+
+        function toggle() {
+            if (imageType == 0) {
+                toggleColors(gray);
+                imageType = 1;
+            } else {
+                toggleColors(color);
+                imageType = 0;
+            }
+        }
+
+        function setImg(img, base64) {
+            // add button and rotate image from original to gray and back (toggle)
+            document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
+        }
+
     </script>
     <title>RGB starter</title>
 {% endblock %}
@@ -14,6 +40,7 @@
 {% block content %}
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
+        <input type="button" value="toggle colors" onclick="toggle();">
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
@@ -37,6 +64,7 @@
                             <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
                             <!-- Hack: create button (btn{{loop.index}} to  call java script function
                                pass index to allow you to toggle images with hidden id's
+
                                {{image.base64}}  original image
                                {{image.base64_GRAY}}  gray scale image
                             -->

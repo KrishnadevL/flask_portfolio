@@ -5,9 +5,17 @@ from algorithms.image import image_data
 # create a Flask instance
 app = Flask(__name__)
 
-@app.route('/rgb/')
+@app.route('/rgb/', methods=["GET", "POST"])
 def rgb():
-    return render_template('rgb.html', images=image_data())
+    rawList = image_data()
+    colorList = []
+    grayList = []
+    for img in rawList:
+        colorList.append(img['base64'])
+        grayList.append(img['base64_GRAY'])
+
+    return render_template('rgb.html', images=rawList, colored=colorList, grayed=grayList)
+
 
 # connects default URL to render index.html
 @app.route('/')
