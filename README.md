@@ -22,6 +22,14 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Krish      |[Krishnadevl](https://github.com/Krishnadevl)       |[Krish's Commits](https://github.com/samayass/flask_portfolio/commits?author=KrishnadevL)  |[Krish's Assigned Issues](https://github.com/samayass/flask_portfolio/issues/assigned/krishnadevl)   	|
 
 ---
+### Sprint 5,6 Week 5
+|Name|Requirement|Ticket|Grade|Notes|
+|---|---|---|---|--|
+|Krish| 3.2 Notes + 3.1 & 3.2 Quiz/Corrections|[3.2 Notes](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.t7uggz5fm7rx), [3,1 & 3.2 Quiz](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.v8b6fn7y87a4)|3/3|No TPT notes(giving the presentation as an OO), Recived 100% on both quizzes, no corrections needed.|
+|Kamryn| TPT notes & Kahoot + 3.1 Notes + 3.1 & 3.2 Quiz/Corrections|[TPT Notes+Kahoot](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.wckdh6uq9hze), [3.1 Notes](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.y17i2mi9qt87), [3,1 & 3.2 Quiz](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.i0b1262xvvds)|3/3|Recived 100% on both quizzes, no corrections needed.|
+|Samaya| TPT notes & Kahoot +  3.1 Notes + 3.1 & 3.2 Quiz/Corrections|[TPT Notes+Kahoot](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.ju1ldqwte8sc), [3.1 Notes](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.uq41fmvwo96c), [3,1 & 3.2 Quiz](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.u664rhcg65lv)|3/3|Recived 100% on both quizzes, no corrections needed.|
+|Divya| TPT notes & Kahoot +  3.2 Notes + 3.1 & 3.2 Quiz/Corrections|[TPT Notes+Kahoot](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.ju1ldqwte8sc), [3.2 Notes](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.kwggwcqlkcxb), [3,1 & 3.2 Quiz/Corrections for 3.1](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.qmfygezbttln)|3/3|N/A|
+---
 ### Sprint 3,4 week 4
 |Task| Tangible | 
 |---|---|
