@@ -1,7 +1,16 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw,ImageFont
 import numpy
 import base64
+from pathlib import Path
 from io import BytesIO
+
+
+#img = Image.open('static/img/lassen-volcano-256.jpg')
+#d1 = ImageDraw.Draw(img)
+#d1.text((28, 36), "Sample Text", fill=(255, 0, 0))
+#img.show()
+#img.save("image_text.jpg")
+
 
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
@@ -18,15 +27,16 @@ def image_formatter(img, img_type):
 
 # color_data prepares a series of images for data analysis
 def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
+    img = Image.open('static/img/blue-square-256.png')
+
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"}
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -34,6 +44,10 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+        d1 = ImageDraw.Draw(img_reference)
+        d1.text((5, 0), ":)", fill=(255, 0, 0))
+        img.save("image2_text.png")
+
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode
