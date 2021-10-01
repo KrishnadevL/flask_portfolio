@@ -1,17 +1,16 @@
-from PIL import Image, ImageDraw,ImageFont
+from PIL import Image, ImageDraw, ImageFilter
 import numpy
 import base64
-from pathlib import Path
 from io import BytesIO
 
+#Open existing image
+OriImage = Image.open('static/img/doggo.png')
+OriImage.show()
 
-#img = Image.open('static/img/lassen-volcano-256.jpg')
-#d1 = ImageDraw.Draw(img)
-#d1.text((28, 36), "Sample Text", fill=(255, 0, 0))
-#img.show()
-#img.save("image_text.jpg")
-
-
+blurImage = OriImage.filter(ImageFilter.BLUR)
+blurImage.show()
+#Save blurImage
+blurImage.save('static/img/doggo.png')
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
@@ -28,7 +27,6 @@ def image_formatter(img, img_type):
 # color_data prepares a series of images for data analysis
 def image_data(path="static/img/", img_list=None):  # path of static images is defaulted
     img = Image.open('static/img/blue-square-256.png')
-
     if img_list is None:  # color_dict is defined with defaults
         # O(1)
         img_list = [
@@ -36,8 +34,10 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
             {'source': "iconsdb.com", 'label': "Red square", 'file': "red-square-16.png"},
             {'source': "iconsdb.com", 'label': "Green square", 'file': "green-square-16.png"},
+            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
-            {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"}
+            {'source': "Dog", 'label': "Dog", 'file': "doggo.png"},
+            {'source': "Dog", 'label': "Dog", 'file': "doggo.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     # O(n^2)
@@ -50,7 +50,6 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         d1 = ImageDraw.Draw(img_reference)
         d1.text((5, 0), ":)", fill=(255, 0, 0))
         img.save("image2_text.png")
-
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode

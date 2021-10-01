@@ -126,6 +126,14 @@ def sam_binary():
         # starting and empty input default
         return render_template("sam_binary.html", bit_size_s=8)
 
+@app.route('/div_binary/', methods=['GET', 'POST'])
+def div_binary():
+    if request.form:
+        bit_size_d = request.form.get("bit_size_d")
+        if len(bit_size_d) != 0:  # input field has content
+            return render_template("div_binary.html", bit_size_d=int(bit_size_d))
+    # starting and empty input default
+    return render_template("div_binary.html", bit_size_d=8)
 
 
 # runs the application on the development server
