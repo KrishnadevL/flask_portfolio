@@ -30,6 +30,7 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
     img = Image.open('static/img/blue-square-256.png')
 
     if img_list is None:  # color_dict is defined with defaults
+        # O(1)
         img_list = [
             {'source': "Peter Carolin", 'label': "Lassen Volcano", 'file': "lassen-volcano-256.jpg"},
             {'source': "iconsdb.com", 'label': "Black square", 'file': "black-square-16.png"},
@@ -39,6 +40,8 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
+    # O(n^2)
+    print(img_list)
     for img_dict in img_list:
         img_dict['path'] = '/' + path  # path for HTML access (frontend)
         file = path + img_dict['file']  # file with path for local access (backend)
@@ -58,6 +61,9 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
+        # This line is added to check for loop necessity for gray data
+        img_dict['gray_data'] = []
+
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
@@ -67,10 +73,15 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
+
+
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
+        #commented following two lines in order to test for loop gray data
+        #img_dict['gray_data'] = []
+        #for pixel in img_dict['data']:
+        #|---Big O notation changes, removal of commented for loop above---|
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
+            #print(len(pixel))
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
             else:
