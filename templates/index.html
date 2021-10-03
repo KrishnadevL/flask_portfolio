@@ -2,14 +2,53 @@
 {% extends "layouts/base.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
 
-{% block background %}
-<style>
-    body{
-        background: #3B353D;
-    }
-</style>
+
+
+
+{% block body %}
+<img id="purpleimage"src="/static/img/purple.jpg" alt="Purple Poster" height="650" width="400">
+<img id="movieticket"src="/static/img/movieticket.webp" alt="Movie Ticket" height="50" width="100">
+<img id="movieticketbottom"src="/static/img/movieticket.webp" alt="Movie Ticket Bottom" height="50" width="100">
+<h1 id=mainheader> "Quote <br>From </br> a Movie" </h1>
+
+
+    {% block background %}
+        <style>
+
+            body{
+                background: #36223D;
+            }
+
+            #purpleimage {
+                padding-top: 120px;
+                position: absolute;
+                right: 10%;
+            }
+
+            #mainheader {
+                font-size: 130px;
+                padding-top: 130px;
+                position: absolute;
+                left: 9%;
+                text-shadow: 7px 7px purple;
+            }
+
+            #movieticket {
+                position: absolute;
+                top: 72%;
+                left: 40%;
+                transform: rotate(325deg);
+            }
+
+            #movieticketbottom {
+                position: absolute;
+                top: 17%;
+                left: 7%;
+                transform: rotate(325deg);
+            }
+
+        </style>
+    {% endblock %}
+
 {% endblock %}
