@@ -23,6 +23,8 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 ---
 ### Sprint 5,6 Week 6
+---
+Tangibles
 |Name|Requirement|Ticket|Notes|
 |---|---|---|---|
 |Krish|RGB Backend- Write image_data function to be more efficient according to Big O notation.|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/34)|N/A|
