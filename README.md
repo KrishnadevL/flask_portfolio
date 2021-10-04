@@ -26,8 +26,8 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Name|Requirement|Ticket|Notes|
 |---|---|---|---|
 |Krish|RGB Backend- Write image_data function to be more efficient according to Big O notation.|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/32)|N/A|
-|Samayaa|RGB frontend: Gray Scale dynamic change|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/34)|N/A|
-|Divya|RGB New Development- Implement new possibilities in image manipulation|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/35)|Specific image manipulation was blur|
+|Samayaa|RGB frontend: Gray Scale dynamic change|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/35)|N/A|
+|Divya|RGB New Development- Implement new possibilities in image manipulation|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/34)|Specific image manipulation was blur|
 |Kamryn|Write message into image, transport to web|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/33)|N/A|
 
 ---
