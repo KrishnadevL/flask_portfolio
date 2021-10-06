@@ -22,6 +22,26 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Krish      |[Krishnadevl](https://github.com/Krishnadevl)       |[Krish's Commits](https://github.com/samayass/flask_portfolio/commits?author=KrishnadevL)  |[Krish's Assigned Issues](https://github.com/samayass/flask_portfolio/issues/assigned/krishnadevl)   	|
 
 ---
+### Sprint 5,6 Week 6
+---
+Tangibles
+|Name|Requirement|Ticket|Notes|
+|---|---|---|---|
+|Krish|RGB Backend- Write image_data function to be more efficient according to Big O notation.|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/34)|N/A|
+|Samayaa|RGB frontend: Gray Scale dynamic change|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/32)|N/A|
+|Divya|RGB New Development- Implement new possibilities in image manipulation|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/35)|Specific image manipulation was blur|
+|Kamryn|Write message into image, transport to web|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/33)|N/A|
+
+---
+Journal
+|Name|Requirement|Ticket|Notes|
+|---|---|---|---|
+|Krish|3.4, 3.3 Video 3 Notes + 3.3 & 3.4 Quiz/Corrections + Base 64 and organization notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.1uxxjah8zz0r)|No Kahoot or TPT notes since OO|
+|Samayaa| 3.3 Notes + 3.3 & 3.4 Quiz/Corrections + Base 64 and organization notes|[Notes + Quiz corrections +Kahoot](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.dzil263j3w72), |N/A|
+|Divya| 3.4 Notes + 3.3 & 3.4 Quiz/Corrections + Base 64 and organization notes|[Notes + Quiz corrections + Kahoot](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.dzil263j3w72), |N/A|
+|Kamryn| 3.3 Video 1,2 Notes + 3.3 & 3.4 Quiz/Corrections + Base 64 and organization notes|[Notes + Quiz corrections + Kahoot](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.1uxxjah8zz0r)|N/A|
+
+---
 ### Sprint 5,6 Week 5
 |Name|Requirement|Ticket|Grade|Notes|
 |---|---|---|---|--|
