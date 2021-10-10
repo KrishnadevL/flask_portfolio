@@ -49,7 +49,7 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         img_reference = Image.open(file)  # PIL
         d1 = ImageDraw.Draw(img_reference)
         d1.text((5, 0), ":)", fill=(255, 0, 0))
-        img.save("image2_text.png")
+        #img.save("image2_text.png")
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
         img_dict['format'] = img_reference.format
         img_dict['mode'] = img_reference.mode

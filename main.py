@@ -86,6 +86,14 @@ def krish():
 def video0():
     return render_template("video0.html")
 
+@app.route('/Binary_math/', methods=['GET', 'POST'])
+def Binary_math():
+    if request.form:
+        bit_size_k = request.form.get("bit_size_k")
+        if len(bit_size_k) != 0:  # input field has content
+            return render_template("Binary_math.html", bit_size_k=int(bit_size_k))
+    # starting and empty input default
+    return render_template("Binary_math.html", bit_size_k=8)
 
 @app.route('/sam/', methods=['GET', 'POST'])
 def sam():

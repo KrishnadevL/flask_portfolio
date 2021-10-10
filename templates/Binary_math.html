@@ -63,6 +63,22 @@
                     </tr>
                 </table>
             </div>
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb2{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt2{{i}}" onclick="toggleBitr2('{{i}}')">{{ msgTurnOn }}</button>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><input type='text' id='digit2{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
 
         </div>
     </div>
@@ -143,6 +159,26 @@
             const dig = document.getElementById('digit' + i);
             const image = document.getElementById('bulb' + i);
             const butt = document.getElementById('butt' + i);
+            // Change digit and visual
+            if (image.src.match("{{ imgBulbOn }}")) {
+                dig.value = 0;
+                image.src = "{{ imgBulbOff }}";
+                butt.innerHTML = "{{ msgTurnOn }}";
+            } else {
+                dig.value = 1;
+                image.src = "{{ imgBulbOn }}";
+                butt.innerHTML = "{{ msgTurnOff }}";
+            }
+            // Binary numbers
+            const binary = getBits();
+            setConversions(binary);
+        }
+
+        function toggleBitr2(i) {
+            //alert("Digit action: " + i );
+            const dig = document.getElementById('digit2' + i);
+            const image = document.getElementById('bulb2' + i);
+            const butt = document.getElementById('butt2' + i);
             // Change digit and visual
             if (image.src.match("{{ imgBulbOn }}")) {
                 dig.value = 0;
