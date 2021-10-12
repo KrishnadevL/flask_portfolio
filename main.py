@@ -68,6 +68,7 @@ def sam_abt():
 def kamryn_abt():
     return render_template("kamryn_abt.html")
 
+
 @app.route('/div_abt/')
 def div_abt():
     return render_template("div_abt.html")
@@ -133,6 +134,8 @@ def sam_binary():
                 return render_template("sam_binary.html", bit_size_s=int(bit_size_s))
         # starting and empty input default
         return render_template("sam_binary.html", bit_size_s=8)
+
+
 
 @app.route('/div_binary/', methods=['GET', 'POST'])
 def div_binary():
