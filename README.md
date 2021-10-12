@@ -29,8 +29,8 @@ Tangibles
 |---|---|---|---|
 |Krish|Signed Binary Addition + Binary Shift left&right|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/37),[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/42)|N/A|
 |Samayaa|Unsigned Addition + ASCII-Unicode Interface|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/38),[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/40)|N/A|
-|Divya|RGB Color Codes via Binary inputs|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/39)|N/A|
-|Kamryn|Logic Gates|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/41)|N/A|
+|Divya|RGB Color Codes via Binary inputs|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/39)|Issue with pushing due to merge errors|
+|Kamryn|Logic Gates|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/41)|Issue with pushing due to merge errors|
 
 ---
 Journal
