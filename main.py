@@ -96,6 +96,15 @@ def Binary_math():
     # starting and empty input default
     return render_template("Binary_math.html", bit_size_k=8)
 
+@app.route('/Binary_signed/', methods=['GET', 'POST'])
+def Binary_signed():
+    if request.form:
+        bit_size_k = request.form.get("bit_size_k")
+        if len(bit_size_k) != 0:  # input field has content
+            return render_template("Binary_signed.html", bit_size_k=int(bit_size_k))
+    # starting and empty input default
+    return render_template("Binary_signed.html", bit_size_k=8)
+
 @app.route('/sam/', methods=['GET', 'POST'])
 def sam():
     if request.form:
