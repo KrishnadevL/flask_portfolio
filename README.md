@@ -22,7 +22,7 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Krish      |[Krishnadevl](https://github.com/Krishnadevl)       |[Krish's Commits](https://github.com/samayass/flask_portfolio/commits?author=KrishnadevL)  |[Krish's Assigned Issues](https://github.com/samayass/flask_portfolio/issues/assigned/krishnadevl)   	|
 
 ---
-### Sprint 7,8 Week 8
+### Sprint 7,8 Week 7
 ---
 Tangibles
 |Name|Requirement|Ticket|Notes|
@@ -41,6 +41,8 @@ Journal
 |Divya| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.hu611va6oasb), |N/A|
 |Kamryn| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.ovbchvhlmq4p)|N/A|
 ---
+
+Video:https://youtube.com/playlist?list=PLYjonCwGdi6zvLaM-if-JnlrlzfHt8GzV
 ### Sprint 5,6 Week 6
 ---
 Tangibles
