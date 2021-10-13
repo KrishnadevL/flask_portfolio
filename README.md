@@ -29,7 +29,7 @@ Tangibles
 |---|---|---|---|
 |Krish|Signed Binary Addition + Binary Shift left&right|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/37),[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/42)|N/A|
 |Samayaa|Unsigned Addition + ASCII-Unicode Interface|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/38),[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/40)|N/A|
-|Divya|RGB Color Codes via Binary inputs, College Board Video Notes and Quizzes 3.5 and 3.6|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/39)|Issue with pushing due to merge errors|
+|Divya|RGB Color Codes via Binary inputs|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/39)|Issue with pushing due to merge errors|
 |Kamryn|Logic Gates|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/41)|Issue with pushing due to merge errors|
 
 ---
@@ -38,7 +38,7 @@ Journal
 |---|---|---|---|
 |Krish|3.5,3.6 Notes + Quizzes|[Notes + Quiz correction](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.ovbchvhlmq4p)|No  TPT notes since OO|
 |Samayaa| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.hu611va6oasb), |N/A|
-|Divya| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.hu611va6oasb), |N/A|
+|Divya| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.hu611va6oasb), |No Corrections for this week|
 |Kamryn| 3.5,3.6 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.ovbchvhlmq4p)|N/A|
 ---
 
