@@ -22,6 +22,23 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Krish      |[Krishnadevl](https://github.com/Krishnadevl)       |[Krish's Commits](https://github.com/samayass/flask_portfolio/commits?author=KrishnadevL)  |[Krish's Assigned Issues](https://github.com/samayass/flask_portfolio/issues/assigned/krishnadevl)   	|
 
 ---
+### Sprint 7,8 Week 8
+---
+Tangibles
+|Name|Requirement|Ticket|Notes|
+|---|---|---|---|
+
+
+---
+Journal
+|Name|Requirement|Ticket|Notes|
+|---|---|---|---|
+|Krish|3.7,3.8 Notes + Quizzes|[Notes + Quiz correction](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.gqfaf3mxbw4c)|No  TPT notes since OO|
+|Samayaa| 3.7,3.8 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.cn330tfec2d5), |N/A|
+|Divya| 3.7,3.8 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit#bookmark=id.cn330tfec2d5), |No Corrections for this week|
+|Kamryn| 3.7,3.8 Notes + Quizzes + TPT Notes|[Notes + Quiz corrections](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit#bookmark=id.gqfaf3mxbw4cl)|No Corrections for this week|
+---
+---
 ### Sprint 7,8 Week 7
 ---
 Tangibles
