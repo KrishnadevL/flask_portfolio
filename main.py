@@ -1,7 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithms.image import image_data
-
+import requests
 # create a Flask instance
 app = Flask(__name__)
 
@@ -154,6 +154,18 @@ def div_binary():
             return render_template("div_binary.html", bit_size_d=int(bit_size_d))
     # starting and empty input default
     return render_template("div_binary.html", bit_size_d=8)
+
+@app.route('/joke/', methods=['GET', 'POST'])
+def joke():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/joke"
+    """
+    url = "https://csp.nighthawkcodingsociety.com/api/joke"
+    response = requests.request("GET", url)
+    return render_template("joke.html", joke=response.json())
+
+
 
 
 # runs the application on the development server
