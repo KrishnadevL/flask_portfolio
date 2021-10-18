@@ -37,7 +37,6 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
             {'source': "iconsdb.com", 'label': "Blue square", 'file': "blue-square-16.jpg"},
             {'source': "iconsdb.com", 'label': "White square", 'file': "white-square-16.png"},
             {'source': "Dog", 'label': "Dog", 'file': "doggo.png"},
-            {'source': "Dog", 'label': "Dog", 'file': "doggo.png"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     # O(n^2)
@@ -47,6 +46,8 @@ def image_data(path="static/img/", img_list=None):  # path of static images is d
         file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
+        img_reference.filter(ImageFilter.BLUR)
+
         d1 = ImageDraw.Draw(img_reference)
         d1.text((5, 0), ":)", fill=(255, 0, 0))
         #img.save("image2_text.png")
