@@ -4,6 +4,7 @@
 <!-- Head, think of things that are more meta or format oriented -->
 <head>
     <!-- Required meta tags -->
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,30 +15,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <!-- Common style for site -->
     <style>
         :root{
-            --yellow: #f1d483;
-            --green: #9daf9b;
-            --purple: #a59aaf;
-            --lblue: #6084a3;
-            --dblue: #2b425b;
-            --gray: #363d47;
             --white: whitesmoke;
             --black: black;
             --grey: grey;
         }
 
+        * {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
         html, body{
             margin: 0;
             height: 100%;
+            background: fixed;
             animation: fadein 2s;
             -moz-animation: fadein 2s; /* Firefox */
             -webkit-animation: fadein 2s; /* Safari and Chrome */
             -o-animation: fadein 2s; /* Opera */
-            background-color: var(--purple);
-            color: var(--black);
+            background-color: #36223D;
+            background-repeat: repeat;
+            color: var(--white);
         }
 
         .dark-mode {
@@ -46,15 +50,26 @@
         }
 
         h1{
+            font-family: 'Share Tech Mono', monospace;
             font-size: 5em;
         }
 
+        p{
+            color:whitesmoke;
+        }
+        td {
+            color:whitesmoke;
+        }
+        tr{
+            color:whitesmoke;
+        }
         a {
             color: midnightblue;
         }
 
         .fa{
             font-size: 3em;
+            font-family: 'Share Tech Mono', Monospace;
             letter-spacing: 1em;
             transition: all .2s;
             color: white;
@@ -102,10 +117,8 @@
         .row{
             margin: auto;
         }
-
-        .navbar-custom .navbar-brand,
-        .navbar-custom .navbar-text {
-            color: var(--lblue);
+        .navbar {
+            z-index: 1100;
         }
 
     </style>
@@ -118,33 +131,14 @@
 </head>
 
 
-<body style="font-family: gilroyLIGHT,serif; color: var(--gray);" >
+<body style="font-family: 'Share Tech Mono', monospace; color: whitesmoke;" >
 <!-- Bootstrap Navigation Code -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Bootstrap menus -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                {% include "layouts/navbar.html" %}
-    </div>
-</nav>
-
+{% include "layouts/navbar.html" %}
 <!-- CONTENT Block, utilize this block for page specific content  -->
 {% block content %}
 {% endblock %}
 
 
-<div class="contact" style="height: 35vh;">
 
-    <div class="row justify-content-center" style="margin-top: 2%;">
-        <h3 style="color: var(--black); margin-top: 3%; font-size: 2vw;">Contact Us</h3>
-    </div>
-
-    <div class="row justify-content-center">
-        <h4><a href="mailto: nighthawkcodingsociety@gmail">nighthawkcodingsociety@gmail</a></h4>
-    </div>
-
-</div>
 </body>
 </html>

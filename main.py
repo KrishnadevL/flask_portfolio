@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 from algorithms.image import image_data
 import requests
+from api.webapi import api_bp
 # create a Flask instance
 app = Flask(__name__)
 
@@ -161,11 +162,11 @@ def joke():
     # use this url to test on and make modification on you own machine
     url = "http://127.0.0.1:5222/api/joke"
     """
-    url = "https://csp.nighthawkcodingsociety.com/api/joke"
+    url = "http://localhost:5000/api/joke"
     response = requests.request("GET", url)
     return render_template("joke.html", joke=response.json())
 
-
+app.register_blueprint(api_bp)
 
 
 # runs the application on the development server

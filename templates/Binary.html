@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% extends "layouts/layout.html" %}
 {% block content %}
+
     <h1 class="text-center">Binary Math with Conversions</h1>
     <div class="col-12">
         <p>Current Bit Size: {{bit_size_k}}</p>
@@ -14,7 +15,7 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container" >
         <div class="row justify-content-md-center">
 
             <div class="col-8">
@@ -190,6 +191,7 @@
                 }
             }
         }
+        // binary shift left/right
         function shift(n) {
             let binary = getBits();
             // convert to decimal and do math
