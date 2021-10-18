@@ -27,7 +27,10 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 Tangibles
 |Name|Requirement|Ticket|Notes|
 |---|---|---|---|
-
+|Krish|Local API for movie randomization page |[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/45)|N/A|
+|Samayaa|Reorganize front page and ddesign across website|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/47)|N/A|
+|Divya|Movie Ranking System|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/48)|N/A|
+|Kamryn|Movie Forum|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/46)|N/A|
 
 ---
 Journal
