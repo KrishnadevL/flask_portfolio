@@ -168,6 +168,16 @@ def joke():
 
 app.register_blueprint(api_bp)
 
+@app.route('/colorcodes/', methods=['GET', 'POST'])
+def colorcodes():
+    # submit button has been pushed
+    if request.form:
+        bit_size_3 = request.form.get("bit_size_3")
+        if len(bit_size_3) != 0:  # input field has content
+            return render_template("colorcodes.html", bit_size_3=int(bit_size_3))
+    # starting and empty input default
+    return render_template("colorcodes.html", bit_size_3=8)
+
 
 # runs the application on the development server
 if __name__ == "__main__":
