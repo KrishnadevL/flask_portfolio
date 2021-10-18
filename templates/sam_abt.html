@@ -7,21 +7,18 @@
 <!- This is a replacement block for Body in base.html -->
 {% block body %}
     <!- Try building a new body here ->
-    <h2 id="abt_header"> About Me </h2>
     <h1 id="abt_name"> Samaya </h1>
-    <img id="abt_img" src="" alt=" My Picture">
-    <p id="binary"><a href="/sam_binary/">Binary page</a></p>
-    <p id="abt_para"> This is about me. </p>
+{#    <p id="binary"><a href="/sam_binary/">Binary page</a></p>#}
+    <img id="basketball"src="/static/img/basketball.png" alt="basketball" height="300" width="550">
+    <img id="friends"src="/static/img/2019-12-07%2002.23.31%202.jpg" alt="friends" height="200" width="350">
+    <p id="abt_para"> A sophomore currently taking AP Computer Science Principles! </p>
+    <p id="basketballtxt"> I love to play basketball </p>
+    <p id="friendstxt"> I love to hang out with friends </p>
+
 
     <style>
         body{
-            background: #36223D;
-        }
-        #abt_header {
-            text-align: center;
-            padding: 15px;
-            font-size: 5em;
-            color: #BFABC7;
+            background: #37505c;
         }
 
     </style>
@@ -33,18 +30,48 @@
         }
 
         #abt_name {
+            font-family: 'Ephesis';
+            font-size: 120px;
             text-align: center;
             padding: 15px;
-            font-size: 4em;
             color: white;
+            text-shadow: 5px 5px #f76f8e;
+        }
+
+        #basketball{
+            position:absolute;
+            top: 30%;
+        }
+
+        #friends {
+            position:absolute;
+            top: 35%;
+            right: 10%;
+        }
+
+        #friendstxt {
+            position:absolute;
+            top: 30%;
+            right: 11%;
+            font-size: 20px;
+            color: #f76f8e;
+        }
+
+        #basketballtxt{
+            font-size: 25px;
+            position:absolute;
+            left:7%;
+            top: 43%;
+            color: #f76f8e;
+
         }
 
         #abt_para {
-            text-align: center;
-            font-size: 2em;
-            margin-left: 500px;
-            margin-right: 500px;
-            border: #A56ABD solid;
+            position:absolute;
+            top:24%;
+            left: 34.5%;
+            font-size: 15px;
+
 
         }
 
