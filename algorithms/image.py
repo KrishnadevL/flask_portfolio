@@ -5,10 +5,10 @@ from io import BytesIO
 
 #Open existing image
 OriImage = Image.open('static/img/doggo.png')
-OriImage.show()
+#OriImage.show()
 
 blurImage = OriImage.filter(ImageFilter.BLUR)
-blurImage.show()
+#blurImage.show()
 #Save blurImage
 blurImage.save('static/img/doggo.png')
 

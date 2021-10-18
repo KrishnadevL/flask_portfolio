@@ -2,33 +2,50 @@
 {% extends "layouts/layout.html" %}
 
 {% block content %}
+    <img id="movie_collage" src="/static/Assets/MOVIECLASSICSerikweb_2500_800.jpg" alt="Movie Collage">
     <div class="container">
 
-        <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <div class="center-block" >
             <div class="col-12" style="text-align: center;">
-                <h1><strong>Random Joke</strong></h1>
-                <form action={{url_for('joke')}}>
-                    <button>Refresh!</button>
-                </form>
+                <h1 style="text-align:center;"><strong>What to watch right now!</strong></h1>
+                <p style="font-size: 2em;">Stuck at home? Nothing new popping up on your netflix feed? Well simply hit the button on the bottom and we'll find you a new movie to watch in no time.<p>
             </div>
 
 
             <!-- Input and Content -->
-            <div class="jumbotron text-left row">
+            <div class="jumbotron text-left row" style = "width:40%;">
                 <div class="col-md">
-                    <p class="setup"><strong>{{joke.joke}}</strong></p>
+                    <p class="setup" style="text-align:center; color: black;"><strong>{{joke.joke}}</strong></p>
                 </div>
             </div>
-
+            <div>
+                <form style="padding-top:3%" action={{url_for('joke')}}>
+                    <button >Get me a movie!</button>
+                </form>
+            </div>
         </div>
-        <table style="margin: 2%">
-            <tr>
-                <th>JSON Data</th>
-            </tr>
-            <tr>
-                <td>{{joke}}</td>
-            </tr>
-        </table>
-
     </div>
+    <style>
+        #movie_collage {
+            /*Darken image background*/
+            filter: brightness(50%);
+            /* Set a specific height */
+            width: 100%;
+
+
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .center-block{
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
 {% endblock %}

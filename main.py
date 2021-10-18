@@ -1,7 +1,8 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithms.image import image_data
-
+import requests
+from api.webapi import api_bp
 # create a Flask instance
 app = Flask(__name__)
 
@@ -155,14 +156,18 @@ def div_binary():
     # starting and empty input default
     return render_template("div_binary.html", bit_size_d=8)
 
-@app.route('/colorcodes/', methods=['GET', 'POST'])
-def colorcodes():
-    if request.form:
-        bit_size_3 = request.form.get("bit_size_3")
-        if len(bit_size_3) != 0:  # input field has content
-            return render_template("colorcodes.html", bit_size_3=int(bit_size_3))
-    # starting and empty input default
-    return render_template("colorcodes.html", bit_size_3=8)
+@app.route('/joke/', methods=['GET', 'POST'])
+def joke():
+    """
+    # use this url to test on and make modification on you own machine
+    url = "http://127.0.0.1:5222/api/joke"
+    """
+    url = "http://localhost:5000/api/joke"
+    response = requests.request("GET", url)
+    return render_template("joke.html", joke=response.json())
+
+app.register_blueprint(api_bp)
+
 
 # runs the application on the development server
 if __name__ == "__main__":
