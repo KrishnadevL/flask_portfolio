@@ -1,25 +1,39 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
+{% extends "layouts/base.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to kangaroos -->
 {% set project = "Trending" %}
-{% set overview = "https://www.youtube.com/watch?v=qXU-4Dwkv2E" %}
-{% set scrumboard = "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q?view_as=subscriber" %}
-{% set repo = "https://github.com/avabrooks/Python-Web-Portfolio-Series-Demo" %}
-{% set authors = "https://thesmack.nighthawkcodingsociety.com/digitalPortfolios/"  %}
 
-<!-- Setting up a block replacement to customize background to RINGS -->
-{% block background %}
-    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
-    <script>
-        VANTA.HALO({
-            el: "body",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-        })
-    </script>
+{% block body %}
+    <img id="dune" src="/static/img/dune.jpg" alt="dune" height="400" width="350">
+    <img id="no_time_to_die" src="/static/img/no_time_to_die.jpg."  alt="no_time_to_die" height="400" width="350">
+    <img id="shang-chi-poster-marvel" src="/static/img/shang-chi-poster-marvel.jpg" alt="shang-chi-poster-marvel" height="400" width="350">
+    <h1 id="trending"> Trending Movies </h1>
+    <p id="paragraph"> These three movies are currently ones that have captured the public's attention and are breaking records. This week the top three movies are Dune, Shang Chi, and No Time To Die. Out of the three, the most popular would be Shang Chi and the Legend of the 10 Rings. This hit film with a whopping 93% Rotten Tomatoes has captured much of the public's attention with the amount of action and the well written storyline in the film. The next film would be Dune, with a spectacular 89% rating on Rotten Tomatoes. Starring the infamous Zendaya and Timothee Chalamet, this film shows the true meaning of a good movie. Finally, this is followed by the film No Time To Die with 84% rotten tomatoes. This blockbuster starring Daniel Craigs is apart of the James Bond Franchise. Packed with action and enhanced with Craig's acting, it really allows one to enjoy the film</p>
+
+<style>
+    #no_time_to_die {
+        position: absolute;
+        left: 70%;
+        top: 20%;
+        font-size: 25px;
+    }
+    #shang-chi-poster-marvel {
+        position: absolute;
+        left: 40%;
+        top: 20%;
+        font-size: 25px;
+    }
+    #paragraph{
+        position:absolute;
+        top:70%;
+    }
+    #dune {
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        font-size: 25px;
+    }
+</style>
+
 {% endblock %}
