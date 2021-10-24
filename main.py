@@ -69,6 +69,11 @@ def sam_abt():
 def kamryn_abt():
     return render_template("kamryn_abt.html")
 
+@app.route('/review/')
+def review():
+    return render_template("review.html")
+
+
 
 @app.route('/div_abt/')
 def div_abt():
