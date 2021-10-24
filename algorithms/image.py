@@ -3,15 +3,6 @@ import numpy
 import base64
 from io import BytesIO
 
-#Open existing image
-OriImage = Image.open('static/img/doggo.png')
-#OriImage.show()
-
-blurImage = OriImage.filter(ImageFilter.BLUR)
-#blurImage.show()
-#Save blurImage
-blurImage.save('static/img/doggo.png')
-
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
     with BytesIO() as buffer:
