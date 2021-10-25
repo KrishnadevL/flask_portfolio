@@ -19,6 +19,27 @@
         <div id="notimetodie_text"> No Time To Die is an amazing film to watch this week with 84% rotten tomatoes. This blockbuster starring Daniel Craigs is apart of the James Bond Franchise. Packed with action and enhanced with Craig's acting, it really allows one to enjoy the film</div>
     </div>
 
+    <div id="select_movie_block">
+        <input type="button" value="Want our AI to pick a movie ?" onclick="msg()">
+    </div>
+
+    <script>
+        function msg() {
+            var value = Math.floor((Math.random() * 3) + 1);
+            if (value == 1) {
+                alert("Watch Dune today!");
+            }
+            else if (value == 2)
+            {
+                alert("Watch Shang-Chi today!");
+            }
+            else
+            {
+                alert("Watch No time to die today!");
+            }
+        }
+    </script>
+
 <style>
     #trending_header{
         text-align: center;
@@ -40,6 +61,12 @@
         left: 10%;
         top: 20%;
         font-size: 25px;
+    }
+
+    #select_movie_block{
+        position: absolute;
+        bottom:0;
+        left: 45%;
     }
 
     #dune_text {
