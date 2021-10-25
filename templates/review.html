@@ -1,30 +1,36 @@
 <!DOCTYPE HTML>
 {% extends "layouts/layout.html" %}
 {% block content %}
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-{#<button id="button">Click Here!</button>#}
-
-{#<i class="fa fa-thumbs-up" style="font-size:48px;color:red"></i>#}
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <p>
     <input type="image" id="button" class="fa fa-thumbs-up" style="font-size:48px;color:purple" alt=" " />
     <span id="display">0</span>
+    <input type="image" id="downbutton" class="fa fa-thumbs-down" style="font-size:48px;color:purple" alt=" " />
+    <span id="downdisplay">0</span>
+
 </p>
 
 <script>
     var count = 0;
+    var downcount = 0;
     var clicked = 0;
+    var downclicked = 0;
     var button = document.getElementById("button");
     var display = document.getElementById("display");
+    var downbutton = document.getElementById("downbutton");
+    var downdisplay = document.getElementById("downdisplay");
+
 
     button.onclick = function () {
         count++;
         display.innerHTML = count;
     }
 
-    // Flag for "now processing" or "already clicked".
+    downbutton.onclick = function () {
+        downcount++;
+        downdisplay.innerHTML = downcount;
+    }
 
     button.onclick = function () {
 
@@ -35,6 +41,18 @@
         }
 
     }
+
+    downbutton.onclick = function () {
+
+        while (downclicked < 1) {
+            downcount++;
+            downdisplay.innerHTML = downcount;
+            downclicked++;
+        }
+
+    }
+
+
 
 
 

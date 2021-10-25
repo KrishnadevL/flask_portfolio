@@ -1,11 +1,9 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
+<!DOCTYPE HTML>
 {% extends "layouts/base.html" %}
-
-<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
-{% set project = "Trending" %}
-
 {% block body %}
     <h2 id="trending_header"> Trending Movies </h2>
+
     <div id="dune_block">
         <img id="dune_img" src="/static/img/dune.jpg" alt="dune" height="400" width="350">
         <div id="dune_text"> With a spectacular 89% rating on Rotten Tomatoes, Dune is a big hit this week. Starring the infamous Zendaya and Timothee Chalamet, this film shows the true meaning of a good movie.</div>
@@ -124,4 +122,48 @@
 
 </style>
 
+    <script>
+        var count = 0;
+        var downcount = 0;
+        var clicked = 0;
+        var downclicked = 0;
+        var button = document.getElementById("button");
+        var display = document.getElementById("display");
+        var downbutton = document.getElementById("downbutton");
+        var downdisplay = document.getElementById("downdisplay");
+
+
+        button.onclick = function () {
+            count++;
+            display.innerHTML = count;
+        }
+
+        downbutton.onclick = function () {
+            downcount++;
+            downdisplay.innerHTML = downcount;
+        }
+
+        button.onclick = function () {
+
+            while (clicked < 1) {
+                count++;
+                display.innerHTML = count;
+                clicked++;
+            }
+
+        }
+
+        downbutton.onclick = function () {
+
+            while (downclicked < 1) {
+                downcount++;
+                downdisplay.innerHTML = downcount;
+                downclicked++;
+            }
+
+        }
+
+
+
+    </script>
 {% endblock %}
