@@ -22,6 +22,17 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 |Krish      |[Krishnadevl](https://github.com/Krishnadevl)       |[Krish's Commits](https://github.com/samayass/flask_portfolio/commits?author=KrishnadevL)  |[Krish's Assigned Issues](https://github.com/samayass/flask_portfolio/issues/assigned/krishnadevl)   	|
 
 ---
+### Sprint 7,8 Week 9
+---
+Tangibles
+|Name|Requirement|Ticket|Notes|
+|---|---|---|---|
+|Krish|Linked public API to movie randomizer |[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/49#issuecomment-950534686)|N/A|
+|Samayaa|Added like, dislike framework|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/49#issuecomment-950535419)|N/A|
+|Divya|Added new CSS to trending page and local movie randomizer|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/49#issuecomment-950538463)|N/A|
+|Kamryn|Worked on forum board for movies|[Ticket](https://github.com/KrishnadevL/flask_portfolio/issues/49)|N/A|
+
+---
 ### Sprint 7,8 Week 8
 ---
 Tangibles
