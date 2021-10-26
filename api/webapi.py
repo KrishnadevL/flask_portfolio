@@ -43,31 +43,3 @@ joke_list = [
     "The Shawshank Redemption"
 ]
 
-
-def _find_next_id():
-    return max(jokes["id"] for joke in jokes) + 1
-
-
-def _init_jokes():
-    id = 1
-    for joke in joke_list:
-        jokes.append({"id": id, "joke": joke, "haha": 0, "boohoo": 0})
-        id += 1
-
-
-@api_bp.route('/joke')
-def get_joke():
-    if len(jokes) == 0:
-        _init_jokes()
-    return jsonify(random.choice(jokes))
-
-
-@api_bp.route('/jokes')
-def get_jokes():
-    if len(jokes) == 0:
-        _init_jokes()
-    return jsonify(jokes)
-
-
-if __name__ == "__main__":
-    print(random.choice(joke_list))

@@ -1,6 +1,7 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithms.image import image_data
+import requests
 from api.webapi import api_bp
 # create a Flask instance
 app = Flask(__name__)
@@ -38,9 +39,6 @@ def Walruses ():
 def Movies():
     return render_template("Movies.html")
 
-@app.route('/logic_gates/')
-def logic_gates():
-    return render_template("logic_gates.html")
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
@@ -80,6 +78,9 @@ def comments():
     ]
     return render_template("comments.html", attrib_names=attrib_names)
 
+@app.route('/review/')
+def review():
+    return render_template("review.html")
 
 @app.route('/div_abt/')
 def div_abt():
@@ -136,15 +137,6 @@ def kamryn():
             return render_template("kamryn.html", name=name)
     # starting and empty input default
     return render_template("kamryn.html", name="World")
-
-@app.route('/login/', methods=['GET', 'POST'])
-def login():
-    if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:
-            return render_template("login.html", name=name)
-    # starting and empty input default
-    return render_template("login.html", name="World")
 
 
 @app.route('/div/', methods=['GET', 'POST'])
