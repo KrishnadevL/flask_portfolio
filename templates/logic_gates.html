@@ -1,0 +1,94 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to kangaroos -->
+
+
+{% block body %}
+<input type="checkbox" id="input1" name="input1" value="A">
+<label for="input1"> A </label><br>
+<input type="checkbox" id="input2" name="input2" value="B">
+<label for="input2"> B </label><br>
+
+
+<script>
+    // return string with current value of each bit
+    function computeGateValues() {
+        gateInput1 = document.getElementById("input1").checked;
+        gateInput2 = document.getElementById("input2").checked;
+        andResults = gateInput1 && gateInput2;
+        nandResults = !andResults;
+        orResults =  gateInput1 || gateInput2;
+        norResults =  !orResults;
+        xorResults =  (gateInput1 && !gateInput2) || (!gateInput1 && gateInput2);;
+        notResults = !gateInput1
+
+
+        document.getElementById("and_gate_text").value = andResults
+        document.getElementById("nand_gate_text").value = nandResults
+        document.getElementById("or_gate_text").value = orResults
+        document.getElementById("nor_gate_text").value = norResults
+        document.getElementById("xor_gate_text").value = xorResults
+        document.getElementById("not_gate_text").value = notResults
+
+        //alert("OR is " + orResults);
+        //alert("AND is " + andResults);
+        //alert("NAND is " + nandResults);
+    }
+</script>
+
+
+<input type="button" value="Submit" onclick="computeGateValues()">
+
+<TABLE  BORDER="5">
+    <TR>
+        <TH COLSPAN="3">
+            <H3><BR>Logic Gates</H3>
+        </TH>
+    </TR>
+    <TH>Logic Gate</TH>
+    <TH>Symbol</TH>
+    <TH>Result</TH>
+    <TR>
+        <TD>And Gate</TD>
+        <TD><img id="and_gate" src="static/img/and_gate.png" alt="And Gate" height="100" width="300"></TD>
+        <TD><textarea id="and_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+    <TR>
+        <TD>Nand Gate</TD>
+        <TD><img id="nand_gate" src="static/img/nand_gate.png" alt="Nand Gate" height="100" width="300"></TD>
+        <TD><textarea id="nand_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+    <TR>
+        <TD>Or Gate</TD>
+        <TD><img id="or_gate" src="/static/img/or_gate.png" alt="Or Gate" height="100" width="300"></TD>
+        <TD><textarea id="or_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+    <TR>
+        <TD>Nor Gate</TD>
+        <TD><img id="nor_gate" src="/static/img/nor_gate.svg" alt="Nor Gate" height="100" width="300"></TD>
+        <TD><textarea id="nor_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+    <TR>
+        <TD>Xor Gate</TD>
+        <TD><img id="xor_gate" src="/static/img/xor_gate.png" alt="Xor Gate" height="100" width="300"></TD>
+        <TD><textarea id="xor_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+    <TR>
+        <TD>Not Gate</TD>
+        <TD><img id="not_gate" src="/static/img/not_gate.svg" alt="Not Gate" height="100" width="300"></TD>
+        <TD><textarea id="not_gate_text" rows="1" cols="20"></textarea>
+    </TR>
+
+    {% block background %}
+
+    <style>
+
+        body{
+            background: #36223D;
+        }
+
+    </style>
+    {% endblock %}
+
+    {% endblock %}

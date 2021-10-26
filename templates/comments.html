@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+{% block body %}
+<script>
+  class Comments {
+    static totalComment = ""
+    static onSubmit() {
+      var currentComment = document.getElementById("comment").value
+      var currentMovie = document.getElementById("movie").value
+      var currentRating = document.getElementById("rating").value
+      document.getElementById("comment").value = ""
+      document.getElementById("movie").value = ""
+      document.getElementById("rating").value = ""
+      this.totalComment = this.totalComment + "Movie:" + currentMovie + "\n" + "Rating:" +
+              currentRating + "\n" + "Comment:" + currentComment + "\n\n"
+      document.getElementById("outputBox").value = this.totalComment
+    }
+  }
+</script>
+
+  <table>
+    {% for name in attrib_names %}
+      <TR>
+      <TD><label for={{name.textAreaName}} >{{name.labelName}}</label></TD>
+      <TD><textarea id={{name.textAreaName}} placeholder={{name.placeholderName}} rows={{name.rows}} cols={{name.cols}}></textarea></TD>
+      </TR>
+    {% endfor %}
+  </table>
+
+  <input type="button" value="Post" onclick="Comments.onSubmit()">
+
+  <table>
+    <TR>
+      <TD><textarea readonly id="outputBox" rows="10" cols="40"></textarea></TD>
+      </TR>
+  </table>
+
+
+<style>
+  body{
+    background: #36223D;
+  }
+</style>
+
+{% endblock %}
