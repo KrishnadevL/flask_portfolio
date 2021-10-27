@@ -1,8 +1,8 @@
 # import "packages" from flask
 from flask import Flask, render_template, request
 from algorithms.image import image_data
+import random
 import requests
-from api.webapi import api_bp
 # create a Flask instance
 app = Flask(__name__)
 
@@ -138,7 +138,6 @@ def kamryn():
     # starting and empty input default
     return render_template("kamryn.html", name="World")
 
-
 @app.route('/div/', methods=['GET', 'POST'])
 def div():
     if request.form:
@@ -168,17 +167,44 @@ def div_binary():
     # starting and empty input default
     return render_template("div_binary.html", bit_size_d=8)
 
-@app.route('/joke/', methods=['GET', 'POST'])
-def joke():
-    """
-    # use this url to test on and make modification on you own machine
-    url = "http://127.0.0.1:5222/api/joke"
-    """
-    url = "http://localhost:5000/api/joke"
-    response = requests.request("GET", url)
-    return render_template("joke.html", joke=response.json())
+@app.route('/mov_rand/', methods=['GET', 'POST'])
+def mov_rand():
+    if request.form:
+        genre_choice = request.form.get("genre_choice")
+        if len(genre_choice) != 0:  # input field has content
+            genre = str(genre_choice).capitalize()
 
-app.register_blueprint(api_bp)
+            # Link to public API, gets movie data by genre
+            url = ("https://data-imdb1.p.rapidapi.com/movie/byGen/"+ genre +"/")
+
+            querystring = {"page_size":"50"}
+
+            headers = {
+                'x-rapidapi-host': "data-imdb1.p.rapidapi.com",
+                'x-rapidapi-key': "b399060d5cmshdde5a342e03dbfap1a4d84jsn99009368a5f2"
+            }
+
+            response = requests.request("GET", url, headers=headers, params=querystring)
+
+            print(response.text)
+            # Pulls results form data to then be sorted
+            movie_list = []
+            results = response.json().get('results')
+            # determines if there is a value within the list
+            if len(results) == 0:
+                movie_list.append("Sorry, it looks like there arent any movies in that genre. "
+                                  "Maybe check your spelling or try another one")
+            else:
+                for movie in results:
+                    test = movie["title"]
+                    movie_list.append(test)
+            # randomly selects a movie for the generator
+            movie_choice = random.choice(movie_list)
+            print(movie_list)
+            return render_template("mov_rand.html", movie_choice=movie_choice)
+    return render_template("mov_rand.html", movie_choice="Enter a genre!")
+
+
 
 @app.route('/colorcodes/', methods=['GET', 'POST'])
 def colorcodes():
