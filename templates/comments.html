@@ -3,17 +3,35 @@
 
 {% block body %}
 <script>
+
+  // Code borrowed from...
+  // https://stackoverflow.com/questions/22607150/getting-the-url-parameters-inside-the-html-page
+  function GetURLParameter(sParam)
+  {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == sParam)
+      {
+        return sParameterName[1];
+      }
+    }
+  }
+
   class Comments {
     static totalComment = ""
     static onSubmit() {
       var currentComment = document.getElementById("comment").value
       var currentMovie = document.getElementById("movie").value
       var currentRating = document.getElementById("rating").value
+      var userName = GetURLParameter('user_name');
       document.getElementById("comment").value = ""
       document.getElementById("movie").value = ""
       document.getElementById("rating").value = ""
-      this.totalComment = this.totalComment + "Movie:" + currentMovie + "\n" + "Rating:" +
-              currentRating + "\n" + "Comment:" + currentComment + "\n\n"
+      this.totalComment = this.totalComment  + "User: " + userName + "\n" + "Movie: " + currentMovie + "\n" + "Rating: " +
+              currentRating + "\n" + "Comment: " + currentComment + "\n\n"
       document.getElementById("outputBox").value = this.totalComment
     }
   }

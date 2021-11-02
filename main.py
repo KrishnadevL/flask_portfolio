@@ -1,8 +1,9 @@
 # import "packages" from flask
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from algorithms.image import image_data
 import random
 import requests
+import pickle
 # create a Flask instance
 app = Flask(__name__)
 
@@ -100,6 +101,53 @@ def krish():
 def video0():
     return render_template("video0.html")
 
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    #kdf = open('KammyDebug.txt', 'wt+')
+    if request.form:
+        username = request.form.get("username")
+        password = request.form.get("password")
+
+    passwordsFilePathName = 'passwords.bin'
+    filePwd = open(passwordsFilePathName, 'rb+')
+    filePwd.seek(0)
+
+    AllowAccess = False
+    try:
+        # If this is first time (i.e. empty file), then will generate exception
+        # and create the file.
+        userDatabase = pickle.load(filePwd)
+
+        for curUser in userDatabase:
+            if curUser['username'] == username:
+                # Username found,... now check password
+                if curUser['password'] == password:
+                    AllowAccess = True
+                    break
+
+        if not AllowAccess:
+            # If not match was found, ask user to add new credentials to list
+            userDatabase.append({'username':username, 'password':password})
+            filePwd.seek(0)
+            pickle.dump(userDatabase, filePwd)
+    except:
+        # Create new database here, as empty list
+        userDatabase = []
+        pickle.dump(userDatabase, filePwd)
+
+    filePwd.close()
+
+
+    if AllowAccess:
+        #kdf.writelines('Allowing Access...\n')
+        #kdf.close()
+        #return redirect("/comments",)
+        return redirect(url_for('.comments', user_name=username))
+        #return redirect(request.referrer)
+    else:
+        #kdf.close()
+        return render_template("login.html", pwFilePathName=passwordsFilePathName)
+
 @app.route('/Binary_math/', methods=['GET', 'POST'])
 def Binary_math():
     if request.form:
@@ -126,8 +174,6 @@ def sam():
             return render_template("sam.html", name=name)
     # starting and empty input default
     return render_template("sam.html", name="World")
-
-
 
 @app.route('/kamryn/', methods=['GET', 'POST'])
 def kamryn():
