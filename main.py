@@ -250,6 +250,57 @@ def mov_rand():
             return render_template("mov_rand.html", movie_choice=movie_choice)
     return render_template("mov_rand.html", movie_choice="Enter a genre!")
 
+@app.route('/famous_icons/', methods=['GET', 'POST'])
+def famous_icons():
+    if request.form:
+        mov_star_name = request.form.get("mov_star_name")
+        if len(mov_star_name) != 0:  # input field has content
+            star_name = str(mov_star_name).capitalize()
+
+            # Link to public API, gets movie data by genre
+            url = ("https://data-imdb1.p.rapidapi.com/actor/imdb_id_byName/" + star_name + "/")
+
+            querystring = {"page_size":"150"}
+
+            headers = {
+                'x-rapidapi-host': "data-imdb1.p.rapidapi.com",
+                'x-rapidapi-key': "b399060d5cmshdde5a342e03dbfap1a4d84jsn99009368a5f2"
+            }
+
+            response = requests.request("GET", url, headers=headers, params=querystring)
+
+            print(response.text)
+            # Pulls results form data to then be sorted
+            movie_list = []
+            results = response.json().get('results')
+            # determines if there is a value within the list
+            if len(results) == 0:#no star found if user enters name
+                movie_choice = "Sorry, it looks like there arent any movie actor with that name." \
+                               "Maybe check your spelling or try another one"
+            elif len(results) > 1: #multiple stars found with that name
+                star_name = []
+                movie_choice = "Multiple star found with the name entered."\
+                               "Please enter full name of one of the Star."
+                for movie in results:
+                    temp = movie["name"]
+                    star_name.append(temp)
+                movie_choice += ",".join(star_name)
+            else:
+                for id in results:
+                    star_imbd_id = id["imdb_id"]
+                star_movie_url = ("https://data-imdb1.p.rapidapi.com/actor/id/" + star_imbd_id + "/movies_knownFor/")
+                response_movies = requests.request("GET", star_movie_url, headers=headers, params=querystring)
+                results_movies = response_movies.json().get('results')
+                for movie in results_movies:
+                    temp = movie[0]["title"]
+                    movie_list.append(temp)
+                movie_choice = "List of Movies for " + star_name + ": " + ", ".join(movie_list)
+
+
+            print(response.text)
+            return render_template("famous_icons.html", movie_choice=movie_choice)
+    return render_template("famous_icons.html", movie_choice="Enter a Famous actor or actress!")
+
 
 
 @app.route('/colorcodes/', methods=['GET', 'POST'])
