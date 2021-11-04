@@ -3,7 +3,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 -->
 <!-- Bootstrap Navigation Code -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background: #3B353D;" >
-    <a class="navbar-brand" id="main_title" href="http://nighthawkcodingsociety.com/">
+    <a class="navbar-brand" id="main_title" href="http://127.0.0.1:5000/">
        Intermission
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,10 +13,6 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <!--direct links -->
-            <li class="nav-item active">
-                <a class="nav-link" href={{ url_for('index') }}>Intermission</a>
-
-            </li>
             <li class="nav-item active">
                 <a class="nav-link" href={{ url_for('Trending') }}>Trending</a>
             </li>
@@ -29,14 +25,25 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <a class="nav-link" href={{ url_for('m_lab') }}>Our Work</a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href={{ url_for('mov_rand') }}>Movie Randomizer</a>
-            </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href={{ url_for('famous_icons') }}>Famous Actors and Actresses</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Find a Movie/Actor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('famous_icons') }}>Famous Actors & Actresses</a>
+                    <a class="dropdown-item" href={{ url_for('mov_rand') }}>Movie Randomizer</a>
+                </div>
             </li>
-
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Streaming Options
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('netflix') }}>Netflix</a>
+                    <a class="dropdown-item" href={{ url_for('hulu') }}>Hulu/Disney+</a>
+                </div>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About Us
@@ -54,7 +61,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href={{ url_for('Binary') }}>Binary</a>
-                    <a class="dropdown-item" href={{ url_for('colorcodes') }}>colorcode</a>
+                    <a class="dropdown-item" href={{ url_for('colorcodes') }}>Colorcode</a>
                     <a class="dropdown-item" href={{ url_for('rgb') }}>RGB</a>
                     <a class="dropdown-item" href={{ url_for('Binary_math') }}>Unsigned Binary Addition</a>
                     <a class="dropdown-item" href={{ url_for('Binary_signed') }}>Signed Binary Addition</a>
