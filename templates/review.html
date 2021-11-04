@@ -3,61 +3,79 @@
 {% block content %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<p>
-    <input type="image" id="button" class="fa fa-thumbs-up" style="font-size:48px;color:purple" alt=" " />
-    <span id="display">0</span>
-    <input type="image" id="downbutton" class="fa fa-thumbs-down" style="font-size:48px;color:purple" alt=" " />
-    <span id="downdisplay">0</span>
-
-</p>
-
-<script>
-    var count = 0;
-    var downcount = 0;
-    var clicked = 0;
-    var downclicked = 0;
-    var button = document.getElementById("button");
-    var display = document.getElementById("display");
-    var downbutton = document.getElementById("downbutton");
-    var downdisplay = document.getElementById("downdisplay");
 
 
-    button.onclick = function () {
-        count++;
-        display.innerHTML = count;
-    }
+    <p>
+        <button style="font-size:22px" id="button" > <span id="display">0</span> <i class="fa fa-thumbs-up" style="color:purple"></i></button>
+        <button style="font-size:22px" id="downbutton" > <span id="downdisplay">0</span> <i class="fa fa-thumbs-down" style="color:purple"></i></button>
+    </p>
 
-    downbutton.onclick = function () {
-        downcount++;
-        downdisplay.innerHTML = downcount;
-    }
+    <script>
+        var like = 0;
+        var dislike = 0;
+        var button = document.getElementById("button");
+        var display = document.getElementById("display");
+        var downbutton = document.getElementById("downbutton");
+        var downdisplay = document.getElementById("downdisplay");
 
-    button.onclick = function () {
 
-        while (clicked < 1) {
-            count++;
-            display.innerHTML = count;
-            clicked++;
+        button.onclick = function () {
+            like++;
+            display.innerHTML = like;
         }
 
-    }
-
-    downbutton.onclick = function () {
-
-        while (downclicked < 1) {
-            downcount++;
-            downdisplay.innerHTML = downcount;
-            downclicked++;
+        downbutton.onclick = function () {
+            dislike++;
+            downdisplay.innerHTML = dislike;
         }
 
-        if
+        button.onclick = function () {
 
-    }
+            if (like == 0 && dislike==0) {
+                like++;
+            }
+
+            else if (like == 1 && dislike == 1) {
+                dislike--;
+                downdisplay.innerHTML = dislike;
+            }
+            else if (like==0 && dislike==1) {
+                like++;
+                dislike--;
+                downdisplay.innerHTML = dislike;
+            }
+            else {
+                like--;
+            }
+
+            display.innerHTML = like;
+
+
+        }
+
+        downbutton.onclick = function () {
+
+            if (dislike == 0 && like == 0) {
+                dislike++;
+
+            } else if (dislike == 1 && like == 1) {
+                like--;
+                display.innerHTML = like;
+            } else if (dislike == 0 && like == 1) {
+                dislike++;
+                like--;
+                display.innerHTML = like;
+            } else {
+                dislike--;
+            }
+
+            downdisplay.innerHTML = dislike;
+        }
 
 
 
 
 
-</script>
+    </script>
 
 {% endblock %}

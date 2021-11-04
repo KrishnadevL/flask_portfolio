@@ -2,158 +2,414 @@
 <!DOCTYPE HTML>
 {% extends "layouts/base.html" %}
 {% block body %}
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <h2 id="trending_header"> Trending Movies </h2>
+    <div class="wrapper">
+
+    <section id="section1">
+    <a href="#section3" class="arrow__btn">‹</a>
+
 
     <div id="dune_block">
-        <img id="dune_img" src="/static/img/dune.jpg" alt="dune" height="400" width="350">
+        <img id="dune_img" src="/static/img/dune.jpg" alt="dune" height="250" width="200">
         <div id="dune_text"> With a spectacular 89% rating on Rotten Tomatoes, Dune is a big hit this week. Starring the infamous Zendaya and Timothee Chalamet, this film shows the true meaning of a good movie.</div>
     </div>
+        <button style="font-size:22px" id="button" > <span id="display">0</span> <i class="fa fa-thumbs-up" style="color:purple"></i></button>
+        <button style="font-size:22px" id="downbutton" > <span id="downdisplay">0</span> <i class="fa fa-thumbs-down" style="color:purple"></i></button>
+
 
     <div id="shang_chi_poster_marvel_block">
-        <img id="shang-chi-poster-marvel" src="/static/img/shang-chi-poster-marvel.jpg" alt="shang-chi-poster-marvel" height="400" width="350">
+        <img id="shang-chi-poster-marvel" src="/static/img/shang-chi-poster-marvel.jpg" alt="shang-chi-poster-marvel" height="250" width="200">
         <div id="shangchi_text"> This hit film with a whopping 93% Rotten Tomatoes has captured much of the public's attention with the amount of action and the well written storyline in the film.</div>
     </div>
 
-    <div id="no_time_to_die_block">
-        <img id="no_time_to_die" src="/static/img/no_time_to_die.jpg"  alt="no_time_to_die" height="400" width="350">
+
+
+        <div id="no_time_to_die_block">
+        <img id="no_time_to_die" src="/static/img/no_time_to_die.jpg"  alt="no_time_to_die" height="250" width="200">
         <div id="notimetodie_text"> No Time To Die is an amazing film to watch this week with 84% rotten tomatoes. This blockbuster starring Daniel Craigs is apart of the James Bond Franchise. Packed with action and enhanced with Craig's acting, it really allows one to enjoy the film</div>
     </div>
 
-    <div id="select_movie_block">
-        <input type="button" value="Want our AI to pick a movie ?" onclick="msg()">
+    <div id="blackwidow_block">
+        <img id="blackwidow_img" src="/static/img/blackwidow.jpg" alt="black widow" height="250" width="200">
+        <div id="blackwidow_text"> Black Widow ...  </div>
     </div>
 
-    <script>
-        function msg() {
-            var value = Math.floor((Math.random() * 3) + 1);
-            if (value == 1) {
-                alert("Watch Dune today!");
-            }
-            else if (value == 2)
-            {
-                alert("Watch Shang-Chi today!");
-            }
-            else
-            {
-                alert("Watch No time to die today!");
+    <div id="evan_block">
+        <img id="evan_img" src="/static/img/DearEvanposter.png" alt="evan hansen" height="250" width="200">
+        <div id="evan_text"> Dear Evan Hansen ...  </div>
+    </div>
+
+    <div id="cruella_block">
+        <img id="cruella_img" src="/static/img/cruella.jpg" alt="cruella" height="250" width="200">
+        <div id="cruella_text"> Cruella ...  </div>
+    </div>
+
+
+        <a href="#section2" class="arrow__btn">›</a>
+    </section>
+    <section id="section2">
+        <a href="#section1" class="arrow__btn">‹</a>
+
+        <div id="chaos_block">
+            <img id="chaos_img" src="/static/img/chaoswalking.jpg" alt="chaos" height="250" width="200">
+        </div>
+
+        <div id="heights_block">
+            <img id="heights_img" src="/static/img/heights.jpg" alt="heights" height="250" width="200">
+        </div>
+
+
+
+
+
+    <a href="#section3" class="arrow__btn">›</a>
+    </section>
+    <section id="section3">
+    <a href="#section2" class="arrow__btn">‹</a>
+
+        <div id="venom_block">
+            <img id="venom_img" src="/static/img/venom.jpg" alt="venom" height="250" width="200">
+        </div>
+
+
+    <a href="#section1" class="arrow__btn">›</a>
+    </section>
+    </div>
+
+{##}
+{#    <div id="select_movie_block">#}
+{#        <input type="button" value="Want our AI to pick a movie ?" onclick="msg()">#}
+{#    </div>#}
+
+    </body>
+
+    <style>
+        #trending_header{
+            text-align: center;
+            text-shadow: 7px 7px purple;
+            font-family: 'Ephesis';
+            font-size: 100px;
+        }
+
+        #button {
+            position:absolute;
+            top: 260px;
+            left: 110px;
+        }
+
+        #downbutton {
+            position:absolute;
+            top: 260px;
+            left: 210px;
+        }
+
+
+        #no_time_to_die_block {
+            position: absolute;
+            left: 540px;
+            top: 10px;
+            font-size: 25px;
+        }
+        #shang_chi_poster_marvel_block {
+            position: absolute;
+            left: 320px;
+            top: 10px;
+            font-size: 25px;
+        }
+        #dune_block {
+            position: absolute;
+            left: 100px;
+            top: 10px;
+            font-size: 25px;
+        }
+
+        #blackwidow_block {
+            position: absolute;
+            left: 760px;
+            top: 10px;
+        }
+        #evan_block {
+            position: absolute;
+            left: 980px;
+            top: 10px;
+        }
+
+
+        #cruella_block {
+            position: absolute;
+            left: 1200px;
+            top: 10px;
+        }
+
+        #chaos_block{
+            position: absolute;
+            left: 100px;
+            top: 10px;
+            font-size: 25px;
+        }
+        #heights_block {
+            position: absolute;
+            left: 320px;
+            top: 10px;
+            font-size: 25px;
+        }
+
+
+
+
+
+        #select_movie_block{
+            position: absolute;
+            bottom:0;
+            left: 45%;
+        }
+
+        #dune_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* visible */
+        #dune_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #dune_block:hover #dune_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #notimetodie_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* visible */
+        #notimetodie_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #no_time_to_die_block:hover #notimetodie_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #shangchi_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        #blackwidow_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* visible */
+        #blackwidow_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #blackwidow_block:hover #blackwidow_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #evan_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* visible */
+        #evan_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #evan_block:hover #evan_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #cruella_text {
+            /* DIMENSIONS */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 12px;
+            /* BOTTOM */
+            position: absolute;
+            bottom: 0;
+            /* COLORS */
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        /* visible */
+        #cruella_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #cruella_block:hover #cruella_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+        /* visible */
+        #shangchi_text {
+            visibility: visible;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        /* hover */
+        #shang_chi_poster_marvel_block:hover #shangchi_text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*For the scrolling*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 100%);
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        .wrapper section {
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            margin: 20px 0;
+        }
+        .wrapper section .item {
+            padding: 0 2px;
+            transition: 250ms all;
+        }
+        .wrapper section .item:hover {
+            margin: 0 40px;
+            transform: scale(1.2);
+        }
+        .wrapper section a {
+            position: absolute;
+            color: purple;
+            text-decoration: none;
+            font-size: 8em;
+            width: 80px;
+            padding: 20px;
+            text-align: center;
+            z-index: 1;
+        }
+        .wrapper section a:nth-of-type(1) {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            text-shadow: 2px 2px white;
+            {#background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);#}
+        }
+        .wrapper section a:nth-of-type(2) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 28px;
+            text-shadow: 2px 2px white;
+            {#background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);#}
+        }
+        @media only screen and (max-width: 600px) {
+            a.arrow__btn {
+                display: none;
             }
         }
-    </script>
 
-<style>
-    #trending_header{
-        text-align: center;
-    }
-    #no_time_to_die_block {
-        position: absolute;
-        left: 70%;
-        top: 20%;
-        font-size: 25px;
-    }
-    #shang_chi_poster_marvel_block {
-        position: absolute;
-        left: 40%;
-        top: 20%;
-        font-size: 25px;
-    }
-    #dune_block {
-        position: absolute;
-        left: 10%;
-        top: 20%;
-        font-size: 25px;
-    }
 
-    #select_movie_block{
-        position: absolute;
-        bottom:0;
-        left: 45%;
-    }
+    </style>
 
-    #dune_text {
-        /* DIMENSIONS */
-        box-sizing: border-box;
-        width: 100%;
-        padding: 10px;
-        font-size: 12px;
-        /* BOTTOM */
-        position: absolute;
-        bottom: 0;
-        /* COLORS */
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-    }
 
-    /* visible */
-    #dune_text {
-        visibility: visible;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    /* hover */
-    #dune_block:hover #dune_text {
-        visibility: visible;
-        opacity: 1;
-    }
 
-    #notimetodie_text {
-        /* DIMENSIONS */
-        box-sizing: border-box;
-        width: 100%;
-        padding: 10px;
-        font-size: 12px;
-        /* BOTTOM */
-        position: absolute;
-        bottom: 0;
-        /* COLORS */
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-    }
-
-    /* visible */
-    #notimetodie_text {
-        visibility: visible;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    /* hover */
-    #no_time_to_die_block:hover #notimetodie_text {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #shangchi_text {
-        /* DIMENSIONS */
-        box-sizing: border-box;
-        width: 100%;
-        padding: 10px;
-        font-size: 12px;
-        /* BOTTOM */
-        position: absolute;
-        bottom: 0;
-        /* COLORS */
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-    }
-
-    /* visible */
-    #shangchi_text {
-        visibility: visible;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    /* hover */
-    #shang_chi_poster_marvel_block:hover #shangchi_text {
-        visibility: visible;
-        opacity: 1;
-    }
-
-</style>
 
     <script>
-        var count = 0;
-        var downcount = 0;
-        var clicked = 0;
-        var downclicked = 0;
+
+            function msg() {
+            var value = Math.floor((Math.random() * 3) + 1);
+            if (value == 1) {
+            alert("Watch Dune today!");
+        }
+            else if (value == 2)
+        {
+            alert("Watch Shang-Chi today!");
+        }
+            else
+        {
+            alert("Watch No time to die today!");
+        }
+        }
+
+
+        {#Like and Dislike#}
+        var like = 0;
+        var dislike = 0;
         var button = document.getElementById("button");
         var display = document.getElementById("display");
         var downbutton = document.getElementById("downbutton");
@@ -161,34 +417,65 @@
 
 
         button.onclick = function () {
-            count++;
-            display.innerHTML = count;
+            like++;
+            display.innerHTML = like;
         }
 
         downbutton.onclick = function () {
-            downcount++;
-            downdisplay.innerHTML = downcount;
+            dislike++;
+            downdisplay.innerHTML = dislike;
         }
 
-        button.onclick = function () {
+        button.onclick = function (ndx) {
 
-            while (clicked < 1) {
-                count++;
-                display.innerHTML = count;
-                clicked++;
+            if (like == 0 && dislike==0) {
+                like++;
             }
+
+            else if (like == 1 && dislike == 1) {
+                dislike--;
+                downdisplay.innerHTML = dislike;
+            }
+            else if (like==0 && dislike==1) {
+                like++;
+                dislike--;
+                downdisplay.innerHTML = dislike;
+            }
+            else {
+                like--;
+            }
+
+            display.innerHTML = like;
+
 
         }
 
         downbutton.onclick = function () {
 
-            while (downclicked < 1) {
-                downcount++;
-                downdisplay.innerHTML = downcount;
-                downclicked++;
+            if (dislike == 0 && like == 0) {
+                dislike++;
+
+            } else if (dislike == 1 && like == 1) {
+                like--;
+                display.innerHTML = like;
+            } else if (dislike == 0 && like == 1) {
+                dislike++;
+                like--;
+                display.innerHTML = like;
+            } else {
+                dislike--;
             }
 
+            downdisplay.innerHTML = dislike;
         }
+
+
+
+            {
+
+            }
+
+
 
 
 

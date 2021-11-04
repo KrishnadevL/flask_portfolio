@@ -40,6 +40,10 @@ def Walruses ():
 def Movies():
     return render_template("Movies.html")
 
+@app.route('/slider/')
+def slider():
+    return render_template("slider.html")
+
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
@@ -69,6 +73,16 @@ def sam_abt():
 @app.route('/kamryn_abt/')
 def kamryn_abt():
     return render_template("kamryn_abt.html")
+
+
+@app.route('/trivia/')
+def trivia():
+    return render_template("trivia.html")
+
+@app.route('/game/')
+def game():
+    return render_template("game.html")
+
 
 @app.route('/comments/')
 def comments():
@@ -103,7 +117,6 @@ def video0():
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
-    #kdf = open('KammyDebug.txt', 'wt+')
     if request.form:
         username = request.form.get("username")
         password = request.form.get("password")
