@@ -40,9 +40,13 @@ def Walruses ():
 def Movies():
     return render_template("Movies.html")
 
-@app.route('/slider/')
-def slider():
-    return render_template("slider.html")
+@app.route('/netflix/')
+def netflix():
+    return render_template("netflix.html")
+
+@app.route('/hulu/')
+def hulu():
+    return render_template("hulu.html")
 
 
 @app.route('/Binary/', methods=['GET', 'POST'])
@@ -117,6 +121,7 @@ def video0():
 
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
+    #kdf = open('KammyDebug.txt', 'wt+')
     if request.form:
         username = request.form.get("username")
         password = request.form.get("password")

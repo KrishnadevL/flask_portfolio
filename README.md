@@ -3,16 +3,31 @@ Runtime link: https://portfolio.nighthawkcodingsociety.com/
 
 
 ## Intermission
-[Github Repository](https://github.com/samayass/flask_portfolio)   
+Welcome to Intermission. WE're a website that is dedicated to connecting our users to the content they want to see. The website will keep you up to date about the latest trending movies and TV shows across multiple streaming services, let you find new movies based on what you're feeling like watching today and giving users a space to talk about their favorite shows and leave reviews about those movies. 
 
-[Scrum Board](https://github.com/samayass/flask_portfolio/projects/1)  
+### Who we are
+We're a bunch of a highschoolers from Del Norte who are tired of searching around endless websites and scrolling through netflix reels to find something to watch. As such we were inspired to bring you this website in hopes of making the movie/TV Show search experience easier. 
 
-[Github Contributors](https://github.com/samayass/flask_portfolio/graphs/contributors)
+### Contributor information
+[Github Repository](https://github.com/KrishnadevL/flask_portfolio)   
+
+[Scrum Board](https://github.com/KrishnadevL/flask_portfolio/projects/1)  
+
+[Github Contributors](https://github.com/KrishnadevL/flask_portfolio/graphs/contributors)
 
 [Samaya and Divya Pair Jorunal ](https://docs.google.com/document/d/1p35PYstj0w8IxgT5jy2UJo5Z-XcBAF0ucNkWZ-UMmBA/edit?usp=sharing)  
 
 [Krish and Kamryn Pair Jorunal](https://docs.google.com/document/d/1Gl6Cy5CF-b2_k-oHFSUnkzDc9XEHm89nCQ6-IjJqATQ/edit?usp=sharing)
 
+### Use and Run Information
+#### Working with a local copy
+Work  with the code locally by forking this repository and connecting to this VCS via your specific coding platform. 
+
+#### Contributing to the project
+If you wish to to contribute to the project please send an email to krishnadevlaks@gmail.com listing your ideas for the project or possible improvements you would make. After review, if we should so choose, we will be happy to welcome you to our team and make you a contributer on github. You could then connect the VCS in your specific web-app development to make changes on the main app. 
+
+
+## Project History
 
 |   Names 	|  Github ID 	                                     |   Commits     	                                                                         | Assigned Issues  |
 |---	    |---	                                             |---	                                                                                     |---	            |

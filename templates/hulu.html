@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+{% block body %}
+
+    <div>
+        <div class="col-12-auto" style="text-align: center; padding-top:5%;">
+            <h1 style="text-align:center;"><strong>What's popular on Hulu/Disney+ right now!</strong></h1>
+            <p style="font-size: 2em;">These are the top trending movies and TV shows on Hulu/Disney+ right now. Check trailers, release dates and more below.<p>
+        </div>
+
+        <!-- Input and Content -->
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#1.Animaniacs</strong></h2>
+            <iframe width="52.5%" height="720" src="https://www.youtube.com/embed/0ysZiNi_0Kg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">Blending wit, slapstick and pop culture references, the variety show "Animaniacs" features a large cast of characters, whose predominant personalities are the Warner brothers, Yakko and Wakko, and their sister, Dot -- three inseparable siblings -- who have a great time creating havoc and mayhem in the lives of everyone they meet. The series, which originally ran from 1993 thru 1998, also features a number of comedic educational segments, often in musical form.<p>
+                <a class="review_button" href="https://www.hulu.com/series/animaniacs-b072680d-5485-4adf-87ac-4805c0e96bee">Hulu Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt6951546/?ref_=fn_al_tt_1">IMDB Review</a>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#2.What If...?</strong></h2>
+            <iframe width="52.5%" height="720" src="https://www.youtube.com/embed/x9D0uUKJ5KI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">Reimagining noteworthy events in the Marvel Cinematic Universe and creating a multiverse of infinite possibilities.<p>
+                <a class="review_button" href="https://www.disneyplus.com/series/what-if/7672ZVj1ZxU9">Disney+ Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt10168312/">IMDB Review</a>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#3.Star Wars: The Bad Batch</strong></h2>
+            <iframe width="52.5%" height="532" src="https://www.youtube.com/embed/BsOmYpP4UDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">Members of a unique squad of clones find their way in a changing galaxy in the aftermath of the Clone War.<p>
+                <a class="review_button" href="https://www.disneyplus.com/series/the-bad-batch/4gMliqFxxqXC">Disney+ Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt12708542/?ref_=fn_al_tt_1">IMDB Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        #myVideo {
+            /*Darken image background*/
+            filter: brightness(50%);
+            /* Set a specific height */
+            width: 100%;
+
+
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .center-block{
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        #movie {
+            padding-top: 25px;
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+        .review_button {
+            background-color:  rebeccapurple; /* Purple */
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 12px;
+            position:relative;
+
+        }
+        .review_button:hover{
+            background-color:  mediumpurple; /* Light Purple */
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+        #genre_choice {
+            background-color: whitesmoke;
+            background-position: 10px 10px;
+            height: 50px;
+            width: 300px;
+            padding-left: 15px;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+        #genre_choice:focus {
+            background-color: #debfef;
+            background-position: 10px 10px;
+            height: 50px;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+    </style>
+{% endblock %}
+{% endblock %}
