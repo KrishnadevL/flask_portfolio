@@ -21,18 +21,37 @@
   }
 
   class Comments {
-    static totalComment = ""
+    //static totalComment = ""
+    static bFirst = true
+
     static onSubmit() {
       var currentComment = document.getElementById("comment").value
       var currentMovie = document.getElementById("movie").value
       var currentRating = document.getElementById("rating").value
       var userName = GetURLParameter('user_name');
+      if (this.bFirst) {
+        this.totalComment = document.getElementById("outputBox").value
+        //alert(this.totalComment)
+        this.bFirst = false
+      }
+
       document.getElementById("comment").value = ""
       document.getElementById("movie").value = ""
       document.getElementById("rating").value = ""
       this.totalComment = this.totalComment  + "User: " + userName + "\n" + "Movie: " + currentMovie + "\n" + "Rating: " +
               currentRating + "\n" + "Comment: " + currentComment + "\n\n"
+      var tmpTotalComment = this.totalComment
       document.getElementById("outputBox").value = this.totalComment
+
+      //  This code borrowed from:
+      // https://stackoverflow.com/questions/6396101/pure-javascript-send-post-data-without-a-form
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", 'http://127.0.0.1:5000/comments/', true);
+      //xhr.setRequestHeader('Content-Type', 'text/plain');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.send(JSON.stringify({
+        currentMovie, currentRating, userName, tmpTotalComment
+      }));
     }
   }
 </script>
@@ -44,13 +63,14 @@
       <TD><textarea id={{name.textAreaName}} placeholder={{name.placeholderName}} rows={{name.rows}} cols={{name.cols}}></textarea></TD>
       </TR>
     {% endfor %}
+
   </table>
 
   <input type="button" value="Post" onclick="Comments.onSubmit()">
 
   <table>
     <TR>
-      <TD><textarea readonly id="outputBox" rows="10" cols="40"></textarea></TD>
+      <TD><textarea readonly id="outputBox"  rows="10" cols="40">{{persistentComments}} </textarea></TD>
       </TR>
   </table>
 

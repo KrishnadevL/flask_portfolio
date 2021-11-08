@@ -22,6 +22,10 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <a class="nav-link" href={{ url_for('m_lab') }}>Our Work</a>
             </li>
 
+            <li>
+                <a class="nav-link" href={{ url_for('comments') }}>Reviews</a>
+            </li>
+
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,9 +68,24 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <a class="dropdown-item" href={{ url_for('Binary_signed') }}>Signed Binary Addition</a>
                 </div>
             </li>
+            <li>
+                <form action="http://127.0.0.1:5000/login/">
+                    <input id="signin" type="submit" value="Login" />
+                </form>
+            </li>
         </ul>
     </div>
     <style>
+    #navbarSupportedContent {
+        max-width:45%;
+    }
+
+    #signin {
+        position:absolute;
+        left: 90%
+
+    }
     </style>
 </nav>
+
 

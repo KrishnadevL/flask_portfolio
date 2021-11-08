@@ -4,6 +4,7 @@ from algorithms.image import image_data
 import random
 import requests
 import pickle
+import json
 # create a Flask instance
 app = Flask(__name__)
 
@@ -88,14 +89,38 @@ def game():
     return render_template("game.html")
 
 
-@app.route('/comments/')
+@app.route('/comments/', methods=['GET'])
 def comments():
+    #kdf = open('KammyDebug.txt', 'wt+')
+    fileInfoStorage = open('fileInfo.bin', 'rb')
+    try:
+        dataDict = pickle.load(fileInfoStorage)
+        tmpComments = dataDict['tmpTotalComment']
+        #kdf.writelines('Retreiving Comments: %s\n' % dataDict['tmpTotalComment'])
+    except:
+        tmpComments = ""
+
     attrib_names = [
         {'labelName': "Movie:", "textAreaName": "movie", "placeholderName": "Title", "rows": "1", "cols": "32"},
         {'labelName': "Rating:", "textAreaName": "rating", "placeholderName": "1-5", "rows": "1", "cols": "32"},
         {'labelName': "Comment:", "textAreaName": "comment", "placeholderName": "Review!", "rows": "10", "cols": "32"},
     ]
-    return render_template("comments.html", attrib_names=attrib_names)
+
+    fileInfoStorage.close()
+    #kdf.close()
+    return render_template("comments.html", attrib_names=attrib_names, persistentComments=tmpComments)
+
+@app.route('/comments/', methods=['POST'])
+def storeComments():
+   # kdf = open('KammyDebug.txt', 'wt+')
+    fileInfoStorage = open('fileInfo.bin', 'wb+')
+    blob = request.data
+    dataDict = json.loads(bytes.decode(blob))
+    pickle.dump(dataDict, fileInfoStorage)
+    #kdf.writelines('Storing Comments: %s\n' % dataDict)
+    #kdf.close()
+    fileInfoStorage.close()
+    return render_template("comments.html")
 
 @app.route('/review/')
 def review():
