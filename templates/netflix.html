@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+{% block body %}
+
+    <div>
+        <div class="col-12-auto" style="text-align: center; padding-top:5%;">
+            <h1 style="text-align:center;"><strong>What's popular on Netflix right now!</strong></h1>
+            <p style="font-size: 2em;">These are the top trending movies and TV shows on Netflix right now. Check trailers, release dates and more below.<p>
+        </div>
+
+        <!-- Input and Content -->
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#1.Squid Game</strong></h2>
+            <iframe width="52.5%" height="720" src="https://www.youtube.com/embed/oqxAJKy0ii4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits — with deadly high stakes.<p>
+                <a class="review_button" href="https://www.netflix.com/title/81040344">Netflix Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt10919420/">IMDB Review</a>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#2.Locke & Key</strong></h2>
+            <iframe width="52.5%" height="720" src="https://www.youtube.com/embed/_EonRi0yQOE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">After their dad's murder, three siblings move with their mom to his ancestral estate, where they discover magical keys that unlock powers — and secrets.<p>
+                <a class="review_button" href="https://www.netflix.com/title/80241239">Netflix Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt3007572/?ref_=fn_al_tt_1">IMDB Review</a>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top:5%; ">
+            <h2 style="text-align:center; background-color:rebeccapurple; padding:25px; font-size:3em; margin-left:500px; margin-right:500px;"><strong>#3.Queen's Gambit</strong></h2>
+            <iframe width="52.5%" height="720" src="https://www.youtube.com/embed/FU854_5itOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div style="margin-left:500px; margin-right:500px; background-color:#3B353D;">
+                <p style="font-size: 2em;">Set during the Cold War era, orphaned chess prodigy Beth Harmon struggles with addiction in a quest to become the greatest chess player in the world.<p>
+                <a class="review_button" href="https://www.netflix.com/title/80234304">Netflix Page</a>
+                <a class="review_button" href="https://www.imdb.com/title/tt10048342/">IMDB Review</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        #myVideo {
+            /*Darken image background*/
+            filter: brightness(50%);
+            /* Set a specific height */
+            width: 100%;
+
+
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .center-block{
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        #movie {
+            padding-top: 25px;
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+        .review_button {
+            background-color:  rebeccapurple; /* Purple */
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 12px;
+            position:relative;
+
+        }
+        .review_button:hover{
+            background-color:  mediumpurple; /* Light Purple */
+            border: none;
+            color: white;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+        #genre_choice {
+            background-color: whitesmoke;
+            background-position: 10px 10px;
+            height: 50px;
+            width: 300px;
+            padding-left: 15px;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+        #genre_choice:focus {
+            background-color: #debfef;
+            background-position: 10px 10px;
+            height: 50px;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+    </style>
+{% endblock %}
+{% endblock %}

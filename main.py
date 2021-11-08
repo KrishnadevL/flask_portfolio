@@ -40,6 +40,14 @@ def Walruses ():
 def Movies():
     return render_template("Movies.html")
 
+@app.route('/netflix/')
+def netflix():
+    return render_template("netflix.html")
+
+@app.route('/hulu/')
+def hulu():
+    return render_template("hulu.html")
+
 
 @app.route('/Binary/', methods=['GET', 'POST'])
 def Binary():
@@ -69,6 +77,16 @@ def sam_abt():
 @app.route('/kamryn_abt/')
 def kamryn_abt():
     return render_template("kamryn_abt.html")
+
+
+@app.route('/trivia/')
+def trivia():
+    return render_template("trivia.html")
+
+@app.route('/game/')
+def game():
+    return render_template("game.html")
+
 
 @app.route('/comments/')
 def comments():

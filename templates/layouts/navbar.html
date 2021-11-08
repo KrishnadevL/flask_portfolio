@@ -1,47 +1,67 @@
 <!-- Navigation Bar from bootstrap
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: #3B353D; position:relative; right:1.5%;">
-    <a class="navbar-brand" href="/"><img></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Bootstrap Navigation Code -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: #3B353D;" >
+    <a class="navbar-brand" id="main_title" href="http://127.0.0.1:5000/">
+       Intermission
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Bootstrap menus -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav">
-            <a class="nav-link" href={{ url_for('index') }}>Intermission</a>
-            <a class="nav-link" href={{ url_for('Trending') }}>Trending</a>
-            <a class="nav-link" href={{ url_for('Movies') }}>Movies</a>
-            <a class="nav-link" href={{ url_for('m_lab') }}>Our Work</a>
-            <a class="nav-link" href={{ url_for('mov_rand') }}>Movie Randomizer</a>
-            <a class="nav-link" href={{ url_for('famous_icons') }}>Famous Actors and Actresses</a>
+        <ul class="navbar-nav mr-auto">
+            <!--direct links -->
+            <li class="nav-item active">
+                <a class="nav-link" href={{ url_for('Trending') }}>Trending</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href={{ url_for('Movies') }}>Movies</a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href={{ url_for('m_lab') }}>Our Work</a>
+            </li>
 
 
-
-        </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-            <ul class="nav navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
-                        <a class="dropdown-item" href={{ url_for('krish_abt') }}>Krish</a>
-                        <a class="dropdown-item" href={{ url_for('sam_abt') }}>Sam</a>
-                        <a class="dropdown-item" href={{ url_for('kamryn_abt') }}>Kamryn</a>
-                        <a class="dropdown-item" href={{ url_for('div_abt') }}>Div</a>
-                    </div>
-                </li>
-            </ul>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" id="test" style = "padding-right: 40px; position:Relative; right:5%;">
-        <ul class="nav navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Find a Movie/Actor
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('famous_icons') }}>Famous Actors & Actresses</a>
+                    <a class="dropdown-item" href={{ url_for('mov_rand') }}>Movie Randomizer</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Streaming Options
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('netflix') }}>Netflix</a>
+                    <a class="dropdown-item" href={{ url_for('hulu') }}>Hulu/Disney+</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarStarters" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    About Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href={{ url_for('krish_abt') }}>Krish</a>
+                    <a class="dropdown-item" href={{ url_for('sam_abt') }}>Sam</a>
+                    <a class="dropdown-item" href={{ url_for('kamryn_abt') }}>Kamryn</a>
+                    <a class="dropdown-item" href={{ url_for('div_abt') }}>Div</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarModel" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Minilabs
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href={{ url_for('Binary') }}>Binary</a>
-                    <a class="dropdown-item" href={{ url_for('colorcodes') }}>colorcode</a>
+                    <a class="dropdown-item" href={{ url_for('colorcodes') }}>Colorcode</a>
                     <a class="dropdown-item" href={{ url_for('rgb') }}>RGB</a>
                     <a class="dropdown-item" href={{ url_for('Binary_math') }}>Unsigned Binary Addition</a>
                     <a class="dropdown-item" href={{ url_for('Binary_signed') }}>Signed Binary Addition</a>
@@ -49,11 +69,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             </li>
         </ul>
     </div>
-    </div>
     <style>
-        #navbarSupportedContent {
-            max-width:45%;
-        }
     </style>
 </nav>
 
