@@ -7,7 +7,7 @@
 
 
 {% block body %}
-<img id="purpleimage"src="/static/img/movie.png" alt="Purple thing" height="800" width="1200">
+<img id="purpleimage"src="/static/img/movie.png" alt="Purple thing" height="700" width="1100">
 
 
 
@@ -30,6 +30,7 @@ a theoretical concept<br> we learned.<br> The features can be seen throughtout t
 
 <h1 id=statement> interMISSION statement</h1>
     <h1 id="title"> Minilabs</h1>
+    <div class="element"></div>
 
 
 
@@ -217,6 +218,21 @@ a theoretical concept<br> we learned.<br> The features can be seen throughtout t
                 transition: width 2s;
                 margin-left: auto;
                 margin-right: auto;
+                animation: pulse 5s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    background-color: #debfef;
+                }
+                100% {
+                    background-color: #A56ABD;
+                }
+            }
+
+            html,
+            body {
+                height: 100%;
             }
             #minilabs:hover {
                 width: 900px;
